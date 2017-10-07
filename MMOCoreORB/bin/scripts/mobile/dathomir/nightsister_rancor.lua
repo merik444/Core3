@@ -2,7 +2,7 @@ nightsister_rancor = Creature:new {
 	objectName = "@mob/creature_names:nightsister_rancor",
 	socialGroup = "nightsister",
 	faction = "nightsister",
-	level = 55,
+	level = 75,
 	chanceHit = 0.5,
 	damageMin = 395,
 	damageMax = 500,
@@ -35,7 +35,7 @@ nightsister_rancor = Creature:new {
 				{group = "weapons_all", chance = 2500000},
 				{group = "wearables_all", chance = 1500000}
 			},
-			lootChance = 2100000
+			lootChance = 10000000
 		}
 	},
 	weapons = {},

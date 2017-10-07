@@ -4,7 +4,7 @@ janta_herbalist = Creature:new {
 	randomNameTag = true,
 	socialGroup = "janta_tribe",
 	faction = "janta_tribe",
-	level = 27,
+	level = 75,
 	chanceHit = 0.39,
 	damageMin = 305,
 	damageMax = 320,
@@ -31,14 +31,16 @@ janta_herbalist = Creature:new {
 		"object/mobile/dantari_male.iff",
 		"object/mobile/dantari_female.iff"},
 	lootGroups = {
-		{
+		 {
 			groups = {
-				{group = "junk", chance = 5500000},
-				{group = "janta_common", chance = 1500000},
-				{group = "loot_kit_parts", chance = 3000000}
-			}
-		}
-	},
+				{group = "janta_common", chance = 2500000},
+				{group = "composite_armor", chance = 2500000},
+				{group = "ubese_armor", chance = 2500000},
+				{group = "junk", chance = 2500000}
+			},
+			lootChance = 10000000
+		},
+		},
 	weapons = {"primitive_weapons"},
 	conversationTemplate = "",
 	attacks = merge(pikemanmaster,fencermaster,brawlermaster)

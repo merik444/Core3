@@ -243,7 +243,7 @@ public:
 
 		CreatureObject* player = cast<CreatureObject*>(creature);
 
-		int amount = (int)round((float)power * 0.25f);
+		int amount = (int)round((float)power * 0.35f);
 
 		if (amount <= 0)
 			return;
@@ -305,7 +305,7 @@ public:
 	void handleArea(CreatureObject* creature, CreatureObject* areaCenter, StimPack* pharma, float range) const {
 
 		// TODO: Replace this with a CombatManager::getAreaTargets() call
-		
+
 		Zone* zone = creature->getZone();
 
 		if (zone == NULL)
@@ -379,7 +379,7 @@ public:
 				if (tangibleObject != NULL && tangibleObject->isAttackableBy(creature)) {
 					object = creature;
 				} else {
-					creature->sendSystemMessage("@healing_response:healing_response_62"); //Target must be a player or a creature pet in order to heal damage. 
+					creature->sendSystemMessage("@healing_response:healing_response_62"); //Target must be a player or a creature pet in order to heal damage.
 					return GENERALERROR;
 				}
 			}

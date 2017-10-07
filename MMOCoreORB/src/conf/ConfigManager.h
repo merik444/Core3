@@ -75,9 +75,6 @@ namespace conf {
 		Vector<String> treFiles;
 		SortedVector<String> enabledZones;
 
-		String logFile;
-		int logFileLevel;
-
 	public:
 
 		ConfigManager();
@@ -295,14 +292,6 @@ namespace conf {
 
 		inline int getMaxNavMeshJobs() const {
 			return maxNavMeshJobs;
-		}
-
-		inline const String& getLogFile() const {
-			return logFile;
-		}
-
-		inline int getLogFileLevel() const {
-			return logFileLevel;
 		}
 
 		inline void setProgressMonitors(bool val) {

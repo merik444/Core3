@@ -101,7 +101,7 @@
 #include "server/zone/objects/tangible/components/droid/DroidPlaybackModuleDataComponent.h"
 #include "server/zone/objects/player/badges/Badge.h"
 
-int PlayerManagerImplementation::MAX_CHAR_ONLINE_COUNT = 2;
+int PlayerManagerImplementation::MAX_CHAR_ONLINE_COUNT = 3;
 
 PlayerManagerImplementation::PlayerManagerImplementation(ZoneServer* zoneServer, ZoneProcessServer* impl) :
 										Logger("PlayerManager") {
@@ -596,12 +596,6 @@ void PlayerManagerImplementation::createTutorialBuilding(CreatureObject* player)
 void PlayerManagerImplementation::createSkippedTutorialBuilding(CreatureObject* player) {
 	Zone* zone = server->getZone("tutorial");
 
-	if (zone == NULL) {
-		error("Character creation failed, tutorial zone disabled.");
-		return;
-	}
-
-
 	Reference<BuildingObject*> tutorial = server->createObject(STRING_HASHCODE("object/building/general/newbie_hall_skipped.iff"), 1).castTo<BuildingObject*>();
 
 	Locker locker(tutorial);
@@ -1064,8 +1058,8 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 					uint32 bitmask = obj->getOptionsBitmask() - OptionBitmask::INSURED;
 					obj->setOptionsBitmask(bitmask);
 				} else {
-					//5% Decay for uninsured items
-					obj->inflictDamage(obj, 0, 0.05 * obj->getMaxCondition(), true, true);
+					//9% Decay for uninsured items
+					obj->inflictDamage(obj, 0, 0.09 * obj->getMaxCondition(), true, true);
 				}
 
 				// Calculate condition percentage for decay report
@@ -1094,13 +1088,17 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 	// Jedi experience loss.
 	if(ghost->getJediState() >= 2) {
 		int jediXpCap = ghost->getXpCap("jedi_general");
-		int xpLoss = (int)(jediXpCap * -0.05);
+		int xpLoss = (int)(jediXpCap * -0.20);
 		int curExp = ghost->getExperience("jedi_general");
 
-		int negXpCap = -10000000; // Cap on negative jedi experience
+		int negXpCap = -15000000; // Cap on negative jedi experience
 
 		if ((curExp + xpLoss) < negXpCap)
 			xpLoss = negXpCap - curExp;
+
+		if (xpLoss < -1000000)
+			xpLoss = -1000000;
+
 
 		awardExperience(player, "jedi_general", xpLoss, true);
 		StringIdChatParameter message("base_player","prose_revoke_xp");
@@ -1262,15 +1260,25 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
 			ManagedReference<GroupObject*> group = attacker->getGroup();
 
 			uint32 combatXp = 0;
+			uint32 playerTotal = 0;
 
 			Locker crossLocker(attacker, destructedObject);
+
+			for (int v = 0; v < entry->size(); ++v){
+				uint32 weapDamage = entry->elementAt(v).getValue();
+				playerTotal += weapDamage;
+			}
+
 
 			for (int j = 0; j < entry->size(); ++j) {
 				uint32 damage = entry->elementAt(j).getValue();
 				String xpType = entry->elementAt(j).getKey();
 				float xpAmount = baseXp;
 
-				xpAmount *= (float) damage / totalDamage;
+				//remove damage-based xp split
+				//xpAmount *= (float) damage / totalDamage;
+				//add in weapon damage split
+				xpAmount *= (float) damage / playerTotal;
 
 				//Cap xp based on level
 				xpAmount = Math::min(xpAmount, calculatePlayerLevel(attacker, xpType) * 300.f);
@@ -1285,14 +1293,14 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
 				//Jedi experience doesn't count towards combat experience, and is earned at 20% the rate of normal experience
 				if (xpType != "jedi_general")
 					combatXp += xpAmount;
-				else
-					xpAmount *= 0.2f;
+				//else
+					//xpAmount *= 0.2f;
 
 				//Award individual expType
 				awardExperience(attacker, xpType, xpAmount);
 			}
 
-			combatXp = awardExperience(attacker, "combat_general", combatXp, true, 0.1f);
+			combatXp = awardExperience(attacker, "combat_general", combatXp, true, 0.25f);
 
 			//Check if the group leader is a squad leader
 			if (group == NULL)
@@ -1565,18 +1573,40 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 
 	if (playerObject == NULL)
 		return 0;
+	int xp;
+	if (amount <= 0 || xpType == "jedi_general" || xpType == "gcw_currency_rebel" || xpType == "gcw_currency_imperial" ){
+		xp = playerObject->addExperience(xpType, amount);
+	} else if (xpType == "imagedesigner" ||
+		xpType == "crafting_medicine_general" ||
+		xpType == "crafting_general" ||
+		xpType == "crafting_bio_engineer_creature" ||
+		xpType == "bio_engineer_dna_harvesting" ||
+		xpType == "crafting_clothing_armor" ||
+		xpType == "crafting_weapons_general" ||
+		xpType == "crafting_food_general" ||
+		xpType == "crafting_clothing_general" ||
+		xpType == "crafting_structure_general" ||
+		xpType == "crafting_droid_general" ||
+		xpType == "crafting_spice" ||
+		xpType == "shipwright" ||
+		xpType == "music" ||
+		xpType == "dance" ||
+		xpType == "entertainer_healing"){
+			xp = playerObject->addExperience(xpType, (amount * 5));
+			float speciesModifier = 1.f;
 
-	float speciesModifier = 1.f;
+			if (amount > 0)
+				speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 
-	if (amount > 0)
-		speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
-
-	int xp = 0;
-
-	if (applyModifiers)
-		xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * localMultiplier * globalExpMultiplier));
-	else
-		xp = playerObject->addExperience(xpType, (int)amount);
+	} else {
+		float speciesModifier = 1.f;
+		if (amount > 0)
+			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
+		if (applyModifiers)
+			xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * localMultiplier * globalExpMultiplier));
+		else
+			xp = playerObject->addExperience(xpType, (int)amount);
+	}
 
 	player->notifyObservers(ObserverEventType::XPAWARDED, player, xp);
 
@@ -3338,7 +3368,7 @@ String PlayerManagerImplementation::banAccount(PlayerObject* admin, Account* acc
 	account->setBanReason(reason);
 	account->setBanExpires(System::getMiliTime() + seconds*1000);
 	account->setBanAdmin(admin->getAccountID());
-	
+
 	try {
 
 		Reference<CharacterList*> characters = account->getCharacterList();
@@ -5053,6 +5083,16 @@ void PlayerManagerImplementation::enhanceCharacter(CreatureObject* player) {
 
 	bool message = true;
 
+	// Credits For Buffs
+	if (player->getCashCredits() < 4000){
+		player->sendSystemMessage("Sorry, you don't have enough cash on hand to purchase a buff.");
+		return;
+	} else if (player->getCashCredits() >= 4000){
+		// Charge player for buffs
+		player->subtractCashCredits(4000);
+
+
+
 	message = message && doEnhanceCharacter(0x98321369, player, medicalBuff, medicalDuration, BuffType::MEDICAL, 0); // medical_enhance_health
 	message = message && doEnhanceCharacter(0x815D85C5, player, medicalBuff, medicalDuration, BuffType::MEDICAL, 1); // medical_enhance_strength
 	message = message && doEnhanceCharacter(0x7F86D2C6, player, medicalBuff, medicalDuration, BuffType::MEDICAL, 2); // medical_enhance_constitution
@@ -5066,6 +5106,7 @@ void PlayerManagerImplementation::enhanceCharacter(CreatureObject* player) {
 
 	if (message && player->isPlayerCreature())
 		player->sendSystemMessage("An unknown force strengthens you for battles yet to come.");
+	}
 }
 
 void PlayerManagerImplementation::sendAdminJediList(CreatureObject* player) {

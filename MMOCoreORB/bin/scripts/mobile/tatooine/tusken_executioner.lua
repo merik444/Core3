@@ -2,15 +2,15 @@ tusken_executioner = Creature:new {
 	objectName = "@mob/creature_names:tusken_executioner",
 	socialGroup = "tusken_raider",
 	faction = "tusken_raider",
-	level = 263,
-	chanceHit = 23.5,
-	damageMin = 1645,
-	damageMax = 3000,
+	level = 260, --With such a high CL bleeds and the like go crazy high. If you buff CL, reduce mob dmg!
+	chanceHit = 25,
+	damageMin = 1000,
+	damageMax = 1900,
 	baseXp = 25167,
 	baseHAM = 261000,
 	baseHAMmax = 320000,
-	armor = 3,
-	resists = {85,80,35,100,20,30,45,80,-1},
+	armor = 2,
+	resists = {60,60,30,60,20,30,40,60,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -29,15 +29,13 @@ tusken_executioner = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "junk", chance = 1500000},
 				{group = "tusken_common", chance = 3000000},
 				{group = "wearables_scarce", chance = 2000000},
-				{group = "bone_armor", chance = 750000},
-				{group = "chitin_armor", chance = 750000},
-				{group = "armor_attachments", chance = 500000},
-				{group = "clothing_attachments", chance = 500000},
-				{group = "color_crystals", chance = 500000},
-				{group = "power_crystals", chance = 500000}
+				{group = "bone_armor", chance = 1500000},
+				--{group = "armor_attachments", chance = 500000}, Tuskens don't wear armor!
+				{group = "clothing_attachments", chance = 1500000},
+				{group = "color_crystals", chance = 1000000},
+				{group = "power_crystals", chance = 1000000}
 			}
 		}
 	},

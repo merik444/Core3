@@ -5,14 +5,18 @@
  *      Author: Kyle
  */
 
+#include "engine/engine.h"
+
 #include "server/zone/managers/loot/LootManager.h"
 #include "server/zone/objects/scene/SceneObject.h"
+#include "server/zone/objects/creature/CreatureObject.h"
 #include "server/zone/objects/creature/ai/AiAgent.h"
 #include "server/zone/objects/tangible/weapon/WeaponObject.h"
 #include "server/zone/managers/crafting/CraftingManager.h"
 #include "templates/LootItemTemplate.h"
 #include "templates/LootGroupTemplate.h"
 #include "server/zone/ZoneServer.h"
+#include "server/zone/managers/stringid/StringIdManager.h"
 #include "LootGroupMap.h"
 #include "server/zone/objects/tangible/component/lightsaber/LightsaberCrystalComponent.h"
 
@@ -302,8 +306,9 @@ TangibleObject* LootManagerImplementation::createLootObject(LootItemTemplate* te
 
 	if (System::random(legendaryChance) >= legendaryChance - adjustment) {
 		UnicodeString newName = prototype->getDisplayedName() + " (Legendary)";
-		prototype->setCustomObjectName(newName, false);
-
+		if(!prototype->isAttachment()){
+			prototype->setCustomObjectName(newName, false);
+			}
 		excMod = legendaryModifier;
 
 		prototype->addMagicBit(false);
@@ -311,7 +316,9 @@ TangibleObject* LootManagerImplementation::createLootObject(LootItemTemplate* te
 		legendaryLooted.increment();
 	} else if (System::random(exceptionalChance) >= exceptionalChance - adjustment) {
 		UnicodeString newName = prototype->getDisplayedName() + " (Exceptional)";
-		prototype->setCustomObjectName(newName, false);
+		if(!prototype->isAttachment()){
+			prototype->setCustomObjectName(newName, false);
+			}
 
 		excMod = exceptionalModifier;
 
@@ -471,7 +478,34 @@ TangibleObject* LootManagerImplementation::createLootObject(LootItemTemplate* te
 		addConditionDamage(prototype, craftingValues);
 
 	delete craftingValues;
+	// Update object name with mod stat if is attachment
+	if(prototype->isAttachment()){
+		Attachment* attachment = cast<Attachment*>( prototype.get());
+		HashTable<String, int>* mods = attachment->getSkillMods();
+		HashTableIterator<String, int> iterator = mods->iterator();
+		StringId attachmentName;
+		String key = "";
+		int value = 0;
+		int last = 0;
+		String attachmentType = "[AA] ";
+		String attachmentCustomName = "";
 
+		if(attachment->isClothingAttachment()){
+			attachmentType = "[CA] ";
+		}
+
+		for(int i = 0; i < mods->size(); ++i) {
+			iterator.getNextKeyAndValue(key, value);
+
+			if(value > last){
+				last = value;
+				attachmentName.setStringId("stat_n", key);
+				prototype->setObjectName(attachmentName,false);
+				attachmentCustomName = attachmentType + prototype->getDisplayedName() + " " + String::valueOf(value);
+			}
+		}
+		prototype->setCustomObjectName(attachmentCustomName,false);
+	}
 	return prototype;
 }
 

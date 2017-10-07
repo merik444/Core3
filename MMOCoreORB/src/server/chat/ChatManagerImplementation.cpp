@@ -319,10 +319,10 @@ void ChatManagerImplementation::initiateRooms() {
 	guildRoom = createRoom("guild", systemRoom);
 	guildRoom->setPrivate();
 
-	Reference<ChatRoom*> generalRoom = createRoom("Chat", galaxyRoom);
+	Reference<ChatRoom*> generalRoom = createRoom("Infinity", galaxyRoom);
 	generalRoom->setCanEnter(true);
 	generalRoom->setAllowSubrooms(true);
-	generalRoom->setTitle("public chat for this server, can create rooms here");
+	generalRoom->setTitle("Infinity General Chat");
 
 	auctionRoom = createRoom("Auction", galaxyRoom);
 	auctionRoom->setCanEnter(true);
@@ -1829,7 +1829,7 @@ void ChatManagerImplementation::loadMail(CreatureObject* player) {
 	Locker _locker(player);
 
 	PlayerObject* ghost = player->getPlayerObject();
-    
+
 	ghost->checkPendingMessages();
 
 	SortedVector<uint64>* messages = ghost->getPersistentMessages();

@@ -4,13 +4,13 @@ singing_mountain_clan_arch_witch = Creature:new {
 	randomNameTag = true,
 	socialGroup = "mtn_clan",
 	faction = "mtn_clan",
-	level = 107,
+	level = 147,
 	chanceHit = 1,
 	damageMin = 645,
 	damageMax = 1000,
 	baseXp = 10174,
-	baseHAM = 24000,
-	baseHAMmax = 30000,
+	baseHAM = 44000,
+	baseHAMmax = 52000,
 	armor = 2,
 	resists = {100,5,5,100,100,100,100,100,-1},
 	meatType = "",
@@ -31,17 +31,17 @@ singing_mountain_clan_arch_witch = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "junk", chance = 1500000},
+				--{group = "junk", chance = 1500000},
 				{group = "power_crystals", chance = 500000},
 				{group = "color_crystals", chance = 500000},
-				{group = "armor_attachments", chance = 400000},
-				{group = "clothing_attachments", chance = 400000},
-				{group = "melee_weapons", chance = 2700000},
-				{group = "rifles", chance = 1000000},
-				{group = "pistols", chance = 1000000},
-				{group = "carbines", chance = 1000000},
-				{group = "wearables_uncommon", chance = 500000},
-				{group = "tailor_components", chance = 500000}
+				{group = "armor_attachments", chance = 500000},
+				{group = "clothing_attachments", chance = 500000},
+				{group = "melee_weapons", chance = 3000000},
+				{group = "rifles", chance = 1500000},
+				{group = "pistols", chance = 2000000},
+				{group = "carbines", chance = 1500000},
+				--{group = "wearables_uncommon", chance = 500000},
+				--{group = "tailor_components", chance = 500000}
 			}
 		}
 	},

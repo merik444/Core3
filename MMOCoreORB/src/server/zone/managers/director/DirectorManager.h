@@ -101,7 +101,7 @@ namespace server {
 		QuestVectorMap* createQuestVectorMap(const String& keyString);
 		void removeQuestVectorMap(const String& keyString);
 
-		Vector<Reference<ScreenPlayTask*> > getObjectEvents(SceneObject* obj);
+		Vector<Reference<ScreenPlayTask*> > getPlayerEvents(CreatureObject* player);
 		String getStringSharedMemory(const String& key);
 
 		virtual Lua* getLuaInstance();

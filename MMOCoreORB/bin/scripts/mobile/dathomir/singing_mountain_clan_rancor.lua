@@ -2,13 +2,13 @@ singing_mountain_clan_rancor = Creature:new {
 	objectName = "@mob/creature_names:singing_mountain_clan_rancor",
 	socialGroup = "mtn_clan",
 	faction = "mtn_clan",
-	level = 55,
+	level = 135,
 	chanceHit = 0.5,
 	damageMin = 370,
 	damageMax = 450,
 	baseXp = 5281,
-	baseHAM = 11000,
-	baseHAMmax = 13000,
+	baseHAM = 33000,
+	baseHAMmax = 42000,
 	armor = 1,
 	resists = {130,160,5,200,200,200,5,5,-1},
 	meatType = "meat_carnivore",
@@ -35,7 +35,7 @@ singing_mountain_clan_rancor = Creature:new {
 				{group = "weapons_all", chance = 2500000},
 				{group = "wearables_all", chance = 1500000}
 			},
-			lootChance = 2100000
+			lootChance = 6600000
 		}
 	},
 	weapons = {},

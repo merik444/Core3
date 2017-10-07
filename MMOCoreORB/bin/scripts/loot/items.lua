@@ -1162,3 +1162,62 @@ includeFile("items/wearables/wookiee/wke_skirt_s01.lua")
 includeFile("items/wearables/wookiee/wke_skirt_s02.lua")
 includeFile("items/wearables/wookiee/wke_skirt_s03.lua")
 includeFile("items/wearables/wookiee/wke_skirt_s04.lua")
+
+-- named crystals
+includeFile("items/force_crystal_mauls_vengence.lua")
+includeFile("items/force_crystal_qui_gons_devotion.lua")
+includeFile("items/force_crystal_baass_wisdom.lua")
+includeFile("items/force_crystal_banes_heart.lua")
+includeFile("items/force_crystal_bnars_sacrifice.lua")
+includeFile("items/force_crystal_bondaras_folly.lua")
+includeFile("items/force_crystal_dawn_of_dagobah.lua")
+includeFile("items/force_crystal_gallias_intuition.lua")
+includeFile("items/force_crystal_horns_future.lua")
+includeFile("items/force_crystal_kenobis_legacy.lua")
+includeFile("items/force_crystal_kits_ferocity.lua")
+includeFile("items/force_crystal_kuns_blood.lua")
+includeFile("items/force_crystal_mundis_response.lua")
+includeFile("items/force_crystal_prowess_of_plo_koon.lua")
+includeFile("items/force_crystal_quintessence_of_the_force.lua")
+includeFile("items/force_crystal_strength_of_luminaria.lua")
+includeFile("items/force_crystal_sunriders_destiny.lua")
+includeFile("items/force_crystal_ulics_redemption.lua")
+includeFile("items/force_crystal_windus_guile.lua")
+
+-- custom
+includeFile("items/npc/meatlump_vibro_unit.lua")
+includeFile("items/npc/meatlump_reinforcement_core.lua")
+includeFile("items/npc/meatlump_power_handler.lua")
+
+-- smuggler sub folder
+-- includeFile("items/smuggler/prototype_liquid_suspension.lua")
+-- includeFile("items/smuggler/prototype_blaster_barrel.lua")
+-- includeFile("items/smuggler/prototype_blaster_power_handler.lua")
+-- includeFile("items/smuggler/prototype_composite_shell.lua")
+-- includeFile("items/smuggler/prototype_delivery_shell.lua")
+-- includeFile("items/smuggler/prototype_projectile_barrel.lua")
+-- includeFile("items/smuggler/prototype_projectile_rifle_barrel.lua")
+-- includeFile("items/smuggler/prototype_release_mechanism.lua")
+-- includeFile("items/smuggler/prototype_rifle_blaster_barrel.lua")
+-- includeFile("items/smuggler/prototype_scope.lua")
+-- includeFile("items/smuggler/prototype_stock.lua")
+-- includeFile("items/smuggler/prototype_ubese_shell.lua")
+-- includeFile("items/smuggler/recovered_artifact.lua")
+
+------------------------------Boogles Custom------------------------------
+--Wearables--
+includeFile("items/wearables/boogles_wearables_geo/ring/beast_mastery_ring.lua")
+--Wearables--
+--Geo-Cave Stuff--
+includeFile("items/geonosian_lab/boogles_geo_items/experimental_vibro_motor.lua")
+includeFile("items/geonosian_lab/boogles_geo_items/epic_geo_power_cube_green.lua")
+includeFile("items/geonosian_lab/boogles_geo_items/epic_geo_power_cube_white.lua")
+includeFile("items/geonosian_lab/boogles_geo_items/epic_geo_power_cube_red.lua")
+includeFile("items/geonosian_lab/boogles_geo_items/epic_geo_power_cube_yellow.lua")
+includeFile("items/geonosian_lab/boogles_geo_items/experimented_rancor_hides.lua")
+includeFile("items/geonosian_lab/boogles_geo_items/experimented_rancor_padded_armor_segment.lua")
+includeFile("items/geonosian_lab/boogles_geo_items/experimented_rancor_tooth.lua")
+--Geo-Cave Stuff--
+--Weapons--
+--Weapons--
+------------------------------Boogles Custom------------------------------

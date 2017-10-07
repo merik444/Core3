@@ -23,7 +23,7 @@ AccountManager::AccountManager(LoginServer* loginserv) : Logger("AccountManager"
 
 	autoRegistration = true;
 	requiredVersion = "";
-	maxOnlineCharacters = 1;
+	maxOnlineCharacters = 3;
 
 	setLogging(false);
 	setGlobalLogging(false);
@@ -111,7 +111,7 @@ Account* AccountManager::validateAccountCredentials(LoginClient* client, const S
 			account = createAccount(username, password, passwordStored);
 		} else {
 			if(client != NULL)
-				client->sendErrorMessage("Login Error", "Automatic registration is currently disabled. Please contact the administrators of the server in order to get an authorized account.");
+				client->sendErrorMessage("Login Error", "The account name does not exist, please visit www.swginfinity.com/play-now to create an account.");
 			return NULL;
 		}
 	}
@@ -119,7 +119,7 @@ Account* AccountManager::validateAccountCredentials(LoginClient* client, const S
 	if(!account->isActive()) {
 
 		if(client != NULL)
-			client->sendErrorMessage("Account Disabled", "The server administrators have disabled your account.");
+			client->sendErrorMessage("Account Not Active", "You must activate your account by visiting swginfinity.com/play-now and re-requesting activation.");
 
 		return NULL;
 	}
@@ -147,7 +147,7 @@ Account* AccountManager::validateAccountCredentials(LoginClient* client, const S
 	if(account->isBanned()) {
 
 		StringBuffer reason;
-		reason << "Your account has been banned from the server by the administrators.\n\n";
+		reason << "You are not worthy to play on Infinity.\n\n";
 		int totalBan = account->getBanExpires() - time(0);
 
 		int daysBanned = floor((float)totalBan / 60.f / 60.f / 24.f);
@@ -187,7 +187,7 @@ Account* AccountManager::validateAccountCredentials(LoginClient* client, const S
 void AccountManager::updateHash(const String& username, const String& password) {
 	String salt = Crypto::randomSalt();
 	String hash = Crypto::SHA256Hash(dbSecret + password + salt);
-	
+
 	StringBuffer query;
 	query << "UPDATE accounts SET password = '" << hash << "', ";
 	query << "salt = '" << salt << "' ";
@@ -198,8 +198,8 @@ void AccountManager::updateHash(const String& username, const String& password) 
 	} catch (DatabaseException& e) {
 		error(e.getMessage());
 	}
-	
-	
+
+
 }
 
 Account* AccountManager::createAccount(const String& username, const String& password, String& passwordStored) {
@@ -230,19 +230,19 @@ ManagedReference<Account*> AccountManager::getAccount(uint32 accountID, bool for
 
 	Reference<Account*> account = NULL;
 	ManagedReference<ManagedObject*> accObj = NULL;
-	
-	
+
+
 	static uint64 databaseID = ObjectDatabaseManager::instance()->getDatabaseID("accounts");
-	
+
 	uint64 oid = (accountID | (databaseID << 48));
-	
+
 	accObj = Core::getObjectBroker()->lookUp(oid).castTo<ManagedObject*>();
-	
+
 	if(accObj == NULL) {
-		
+
 		// Lazily create account object
 		accObj = ObjectManager::instance()->createObject("Account", 3, "accounts", oid);
-		
+
 		if(accObj == NULL) {
 			//error("Error creating account object with account ID " + String::hexvalueOf((int64)oid));
 			return NULL;
@@ -250,19 +250,19 @@ ManagedReference<Account*> AccountManager::getAccount(uint32 accountID, bool for
 	} else if(!forceSqlUpdate) {
 		return accObj.castTo<Account*>();
 	}
-	
+
 	account = accObj.castTo<Account*>();
 	if(account == NULL) {
 		return NULL;
 	}
-	
+
 	StringBuffer query;
 	query << "SELECT a.active, a.username, a.password, a.salt, a.account_id, a.station_id, UNIX_TIMESTAMP(a.created), a.admin_level FROM accounts a WHERE a.account_id = '" << accountID << "' LIMIT 1;";
-	
+
 	Reference<ResultSet*> result = ServerDatabase::instance()->executeQuery(query.toString());
 	if (result->next()) {
 		Locker locker(account);
-		
+
 		account->setActive(result->getBoolean(0));
 		account->setUsername(result->getString(1));
 		account->setSalt(result->getString(3));
@@ -273,7 +273,7 @@ ManagedReference<Account*> AccountManager::getAccount(uint32 accountID, bool for
 		account->updateFromDatabase();
 		return account;
 	}
-	
+
 	return NULL;
 }
 
@@ -295,13 +295,13 @@ ManagedReference<Account*> AccountManager::getAccount(String query, String& pass
 	if (result->next()) {
 		static uint64 databaseID = ObjectDatabaseManager::instance()->getDatabaseID("accounts");
 		uint64 accountID = result->getUnsignedInt(4);
-	
+
 		uint64 oid = (accountID | (databaseID << 48));
 
 		accObj = Core::getObjectBroker()->lookUp(oid).castTo<ManagedObject*>();
 
 		if(accObj == NULL) {
-			
+
 			// Lazily create account object
 			accObj = ObjectManager::instance()->createObject("Account", 3, "accounts", oid);
 

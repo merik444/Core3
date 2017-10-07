@@ -57,6 +57,4 @@ class CharacterBuilderTerminal extends Terminal {
 	 * @post { player is locked }
 	 */
 	public native void grantGlowyBadges(CreatureObject player);
-	
-	public native void grantJediInitiate(CreatureObject player);
 }

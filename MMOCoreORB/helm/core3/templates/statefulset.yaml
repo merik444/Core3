@@ -32,8 +32,8 @@ spec:
         - containerPort: {{default 44422 .Values.pingPort}}
           name: core3-ping
           protocol: UDP
-        - containerPort: {{default 44455 .Values.statusPort}}
-          name: core3-status
+#        - containerPort: {{default 44455 .Values.statusPort}}
+#          name: core3-status
         env:
         - name: MYSQL_HOST
           valueFrom:
@@ -70,8 +70,6 @@ spec:
           mountPath: /git/Core3/MMOCoreORB/bin/databases
         - name: mysql-varlib
           mountPath: /var/lib/mysql
-        - name: client-tres
-          mountPath: /home/swgemu/Desktop/SWGEmu
   volumeClaimTemplates:
   - metadata:
       name: bdb-database
@@ -91,12 +89,3 @@ spec:
       resources:
         requests:
           storage: 1Gi
-  - metadata:
-      name: client-tres
-      annotations:
-        volume.beta.kubernetes.io/storage-class: local-storage
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 4Gi

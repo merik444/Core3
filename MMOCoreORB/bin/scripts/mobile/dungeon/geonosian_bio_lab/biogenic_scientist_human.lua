@@ -1,8 +1,8 @@
 biogenic_scientist_human = Creature:new {
-	objectName = "@mob/creature_names:geonosian_scientist",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
+	objectName = "",
+	customName = "a scientist",
 	socialGroup = "self",
+	pvpFaction = "",
 	faction = "",
 	level = 25,
 	chanceHit = 0.35,
@@ -24,7 +24,7 @@ biogenic_scientist_human = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = NONE,
-	optionsBitmask = AIENABLED + INVULNERABLE + CONVERSABLE,
+	optionsBitmask = 392,
 	diet = HERBIVORE,
 
 	templates = {
@@ -32,7 +32,7 @@ biogenic_scientist_human = Creature:new {
 		"object/mobile/dressed_combatmedic_trainer_human_female_01.iff"},
 	lootGroups = {},
 	weapons = {},
-	conversationTemplate = "biogenicScientistHumanConvoTemplate",
+	conversationTemplate = "biogenic_scientist_human_ConversationTemplate",
 	attacks = {}
 }
 

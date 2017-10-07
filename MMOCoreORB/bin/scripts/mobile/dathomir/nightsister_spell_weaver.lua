@@ -4,13 +4,13 @@ nightsister_spell_weaver = Creature:new {
 	randomNameTag = true,
 	socialGroup = "nightsister",
 	faction = "nightsister",
-	level = 107,
+	level = 137,
 	chanceHit = 1,
 	damageMin = 645,
 	damageMax = 1000,
 	baseXp = 10174,
-	baseHAM = 24000,
-	baseHAMmax = 30000,
+	baseHAM = 54000,
+	baseHAMmax = 63000,
 	armor = 2,
 	resists = {5,100,5,100,100,100,100,100,-1},
 	meatType = "",
@@ -47,7 +47,7 @@ nightsister_spell_weaver = Creature:new {
 	},
 	weapons = {"mixed_force_weapons"},
 	conversationTemplate = "",
-	attacks = merge(fencermid,swordsmanmid,pikemanmaster,tkamaster,brawlermaster,forcewielder)
+	attacks = merge(fencermid,forcewielder)
 }
 
 CreatureTemplates:addCreatureTemplate(nightsister_spell_weaver, "nightsister_spell_weaver")

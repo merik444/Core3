@@ -72,7 +72,7 @@ LIBS =	$(SYSTEM_LIBS)  \
 	-L$(ENGINE3_PATH)/lib/unix \
 	-L/usr/local/lib \
 	-L$(GTEST_PATH)/lib \
-	-lz -lengine3 -lmysqlclient -llua -ldb-5.3 -lssl -lcrypto -lgtest	
+	-lmysqlclient -lz -lengine3 -llua -ldb-5.3 -lssl -lcrypto -lgtest
 
 #AM_LDFLAGS = -pagezero_size 10000 -image_base 100000000
 #AM_LDFLAGS = --enable-stdcall-fixup
@@ -106,8 +106,7 @@ core3_TESTS = 	server/zone/objects/area/areashapes/tests/CircularAreaShapeTest.c
 			  	server/zone/tests/ZoneTest.cpp \
 			  	server/zone/managers/objectcontroller/command/tests/CommandLuaTest.cpp
 
-core3_IDLS =	autogen/server/zone/objects/creature/credits/CreditObject.cpp \
-				autogen/server/zone/objects/mission/PlayerBounty.cpp \
+core3_IDLS =	autogen/server/zone/objects/mission/PlayerBounty.cpp \
 				autogen/server/chat/PendingMessageList.cpp \
 				autogen/server/zone/managers/frs/FrsManager.cpp \
 				autogen/server/zone/objects/tangible/misc/ContractCrate.cpp \
@@ -377,8 +376,6 @@ core3_IDLS =	autogen/server/zone/objects/creature/credits/CreditObject.cpp \
 
 core3_SOURCES =	$(core3_IDLS) \
 		$(core3_TESTS) \
-		server/zone/managers/credit/CreditManager.cpp \
-		server/zone/objects/creature/credits/CreditObjectImplementation.cpp \
 		server/zone/objects/creature/variables/LuaSkill.cpp \
 		server/zone/objects/player/sui/listbox/LuaSuiListBox.cpp \
 		server/zone/objects/player/sui/LuaSuiPageData.cpp \

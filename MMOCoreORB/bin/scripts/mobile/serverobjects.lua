@@ -1,6 +1,3 @@
--- Custom content
-includeFile("../custom_scripts/mobile/serverobjects.lua")
-
 -- Conversations
 includeFile("conversations.lua")
 
@@ -24,6 +21,7 @@ includeFile("thug/serverobjects.lua")
 includeFile("townsperson/serverobjects.lua")
 includeFile("tutorial/serverobjects.lua")
 includeFile("yavin4/serverobjects.lua")
+includeFile("custom_content/serverobjects.lua")
 
 includeFile("faction/serverobjects.lua")
 includeFile("dungeon/serverobjects.lua") 

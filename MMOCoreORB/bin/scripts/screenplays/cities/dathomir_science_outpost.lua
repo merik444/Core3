@@ -41,4 +41,6 @@ function DathomirScienceOutpostScreenPlay:spawnMobiles()
 	self:setMoodString(pNpc, "neutral")
 	spawnMobile("dathomir", "r3", 60, -78.3142, 18, -1629.93, 144.919, 0)
 	spawnMobile("dathomir", "r4", 60, -134.195, 18, -1599.14, 45.5678, 0)
+	
+	spawnSceneObject("dathomir", "object/building/player/city/shuttleport_corellia.iff", 5240, 78, -4087, 0, 0)
 end

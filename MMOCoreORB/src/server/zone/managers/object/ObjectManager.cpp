@@ -60,7 +60,6 @@ ObjectManager::ObjectManager() : DOBObjectManager() {
 	databaseManager->loadObjectDatabase("surveys", true);
 	databaseManager->loadObjectDatabase("accounts", true);
     databaseManager->loadObjectDatabase("pendingmail", true);
-	databaseManager->loadObjectDatabase("credits", true);
 	databaseManager->loadObjectDatabase("navareas", true, 0xFFFF, false);
 
 	ObjectDatabaseManager::instance()->commitLocalTransaction();
@@ -867,12 +866,12 @@ SceneObject* ObjectManager::createObject(uint32 objectCRC, int persistenceLevel,
 		return NULL;
 	}
 
-	object->setPersistent(persistenceLevel);
-
 	if (initializeTransientMembers)
 		object->initializeTransientMembers();
 
 	if (persistenceLevel > 0) {
+		object->setPersistent(persistenceLevel);
+
 		updatePersistentObject(object);
 
 		object->queueUpdateToDatabaseTask();
@@ -901,10 +900,10 @@ ManagedObject* ObjectManager::createObject(const String& className, int persiste
 
 	servant->_serializationHelperMethod();
 
-	object->setPersistent(persistenceLevel);
-
 	if (initializeTransientMembers)
 		object->initializeTransientMembers();
+
+	object->setPersistent(persistenceLevel);
 
 	object->deploy();
 

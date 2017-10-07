@@ -358,3 +358,46 @@ includeFile("groups/wearables/wearables_common.lua")
 includeFile("groups/wearables/wearables_rare.lua")
 includeFile("groups/wearables/wearables_scarce.lua")
 includeFile("groups/wearables/wearables_uncommon.lua")
+
+-- custom items
+includeFile("groups/weapon/infinity_lightsaber.lua")
+includeFile("groups/named_crystals.lua")
+
+includeFile("groups/npc/meatlump_melee_components.lua")
+includeFile("groups/npc/meatlump_ranged_components.lua")
+
+-- named crystals
+includeFile("groups/crystal_mauls_vengence.lua")
+includeFile("groups/crystal_qui_gons_devotion.lua")
+includeFile("groups/crystal_baass_wisdom.lua")
+includeFile("groups/crystal_banes_heart.lua")
+includeFile("groups/crystal_bnars_sacrifice.lua")
+includeFile("groups/crystal_bondaras_folly.lua")
+includeFile("groups/crystal_dawn_of_dagobah.lua")
+includeFile("groups/crystal_gallias_intuition.lua")
+includeFile("groups/crystal_horns_future.lua")
+includeFile("groups/crystal_kenobis_legacy.lua")
+includeFile("groups/crystal_kits_ferocity.lua")
+includeFile("groups/crystal_kuns_blood.lua")
+includeFile("groups/crystal_mundis_response.lua")
+includeFile("groups/crystal_prowess_of_plo_koon.lua")
+includeFile("groups/crystal_quintessence_of_the_force.lua")
+includeFile("groups/crystal_strength_of_luminaria.lua")
+includeFile("groups/crystal_sunriders_destiny.lua")
+includeFile("groups/crystal_ulics_redemption.lua")
+includeFile("groups/crystal_windus_guile.lua")
+
+-- smuggler sub-folder
+-- includeFile("groups/smuggler/smug_armor.lua")
+-- includeFile("groups/smuggler/smug_medical.lua")
+-- includeFile("groups/smuggler/smug_wep.lua")
+
+------------------------------Boogles Custom------------------------------
+--Geo--
+includeFile("groups/geonosian_lab/boogles_geo_group/geonosian_epic.lua")
+includeFile("groups/geonosian_lab/boogles_geo_group/geo_rancor.lua")
+--Geo--
+--Wearables--
+includeFile("groups/wearables/boogles_wearables_geo/mastery_geocave_jewelry.lua")
+--Wearables--
+------------------------------Boogles Custom------------------------------

@@ -4,7 +4,7 @@ janta_primalist = Creature:new {
 	randomNameTag = true,
 	socialGroup = "janta_tribe",
 	faction = "janta_tribe",
-	level = 42,
+	level = 75,
 	chanceHit = 0.47,
 	damageMin = 405,
 	damageMax = 520,
@@ -12,7 +12,7 @@ janta_primalist = Creature:new {
 	baseHAM = 9700,
 	baseHAMmax = 11900,
 	armor = 1,
-	resists = {-1,0,-1,0,0,60,0,-1,-1},
+	resists = {-1,0,-1,0,0,30,0,-1,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -31,14 +31,16 @@ janta_primalist = Creature:new {
 		"object/mobile/dantari_male.iff",
 		"object/mobile/dantari_female.iff"},
 	lootGroups = {
-		{
+		 {
 			groups = {
-				{group = "junk", chance = 5500000},
-				{group = "janta_common", chance = 1500000},
-				{group = "loot_kit_parts", chance = 3000000}
-			}
-		}
-	},
+				{group = "janta_common", chance = 2500000},
+				{group = "composite_armor", chance = 2500000},
+				{group = "ubese_armor", chance = 2500000},
+				{group = "clothing_attachments", chance = 2500000}
+			},
+			lootChance = 10000000
+		},
+		},
 	weapons = {"primitive_weapons"},
 	conversationTemplate = "",
 	attacks = merge(pikemanmaster,fencermaster,brawlermaster)

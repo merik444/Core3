@@ -4,7 +4,7 @@ meatlump_oaf = Creature:new {
 	randomNameTag = true,
 	socialGroup = "meatlump",
 	faction = "meatlump",
-	level = 9,
+	level = 25,
 	chanceHit = 0.270000,
 	damageMin = 80,
 	damageMax = 90,
@@ -44,11 +44,13 @@ meatlump_oaf = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "junk", chance = 2900000},
-				{group = "loot_kit_parts", chance = 1500000},
+				--{group = "junk", chance = 2900000},
+				--{group = "loot_kit_parts", chance = 1500000},
 				{group = "color_crystals", chance = 100000},
-				{group = "tailor_components", chance = 500000},
-				{group = "meatlump_common", chance = 5000000}
+				--{group = "tailor_components", chance = 500000},
+				--{group = "meatlump_common", chance = 5000000}
+				{group = "armor_attachments", chance = 4900000},
+				{group = "clothing_attachments", chance = 5000000},
 			}
 		}
 	},

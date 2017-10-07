@@ -357,7 +357,7 @@ void SuiManager::handleCharacterBuilderSelectItem(CreatureObject* player, SuiBox
 
 			if (templatePath == "unlearn_all_skills") {
 
-				SkillManager::instance()->surrenderAllSkills(player, true, false);
+				SkillManager::instance()->surrenderAllSkills(player);
 				player->sendSystemMessage("All skills unlearned.");
 
 			} else if (templatePath == "cleanse_character") {
@@ -527,9 +527,6 @@ void SuiManager::handleCharacterBuilderSelectItem(CreatureObject* player, SuiBox
 
 			} else if (templatePath == "become_glowy") {
 				bluefrog->grantGlowyBadges(player);
-
-			} else if (templatePath == "unlock_jedi_initiate") {
-				bluefrog->grantJediInitiate(player);
 
 			} else {
 				if (templatePath.length() > 0) {

@@ -337,8 +337,8 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 
 	auto client = callback->getClient();
 
-	if (client->getCharacterCount(zoneServer.get()->getGalaxyID()) >= 10) {
-		ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are limited to 10 characters per galaxy.", 0x0);
+	if (client->getCharacterCount(zoneServer.get()->getGalaxyID()) >= 6) {
+		ErrorMessage* errMsg = new ErrorMessage("Create Error", "Infinity allows a maximum of 6 characters per person.", 0x0);
 		client->sendMessage(errMsg);
 
 		return false;
@@ -602,10 +602,10 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 
 	//Join auction chat room
 	ghost->addChatRoom(chatManager->getAuctionRoom()->getRoomID());
-
+	
 	ManagedReference<SuiMessageBox*> box = new SuiMessageBox(playerCreature, SuiWindowType::NONE);
-	box->setPromptTitle("PLEASE NOTE");
-	box->setPromptText("You are limited to creating one character per hour. Attempting to create another character or deleting your character before the 1 hour timer expires will reset the timer.");
+	box->setPromptTitle("A new Infinitian is born!");
+	box->setPromptText("With the warmest of welcomes, hello from Infinity! We look forward to welcoming you into our Galaxy. Make sure to join our Discord (link on our website swginfinity.com)");
 
 	ghost->addSuiBox(box);
 	playerCreature->sendMessage(box->generateMessage());

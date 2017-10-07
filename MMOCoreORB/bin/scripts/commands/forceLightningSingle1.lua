@@ -46,7 +46,7 @@ ForceLightningSingle1Command = {
 
 	minDamage = 950,
 	maxDamage = 1250,
-	speed = 4.0,
+	speed = 2.5,
 	forceCost = 75,
 	visMod = 25,
 	
@@ -60,7 +60,7 @@ ForceLightningSingle1Command = {
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
 	forceAttack = true,
-	damageType = ELECTRICITY_DAMAGE,
+	damageType = LIGHTSABER_DAMAGE,
 
 	range = 32
 }

@@ -48,12 +48,12 @@ ConfigManager::ConfigManager() {
 	loginRequiredVersion = "20050408-18:00";
 	loginPort = 44453;
 	loginAllowedConnections = 30;
-	autoReg = true;
+	autoReg = false;
 
 	zoneProcessingThreads = 10;
 	zoneAllowedConnections = 300;
 	zoneGalaxyID = 2;
-	zoneOnlineCharactersPerAccount = 1;
+	zoneOnlineCharactersPerAccount = 3;
 
 	statusAllowedConnections = 100;
 	statusInterval = 60;
@@ -64,8 +64,6 @@ ConfigManager::ConfigManager() {
 	purgeDeletedCharacters = 10; //Default is 10 minutes.
 
 	maxNavMeshJobs = 6;
-
-	logFileLevel = Logger::INFO;
 }
 
 bool ConfigManager::loadConfigData() {
@@ -138,9 +136,6 @@ bool ConfigManager::loadConfigData() {
 	purgeDeletedCharacters = getGlobalInt("PurgeDeletedCharacters");
 
 	maxNavMeshJobs = getGlobalInt("MaxNavMeshJobs");
-
-	logFile = getGlobalString("LogFile");
-	logFileLevel = getGlobalInt("LogFileLevel");
 
 	return true;
 }

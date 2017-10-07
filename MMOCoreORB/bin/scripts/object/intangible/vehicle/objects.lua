@@ -432,3 +432,395 @@ object_intangible_vehicle_shared_vehicle_pcd_base = SharedIntangibleObjectTempla
 }
 
 ObjectTemplates:addClientTemplate(object_intangible_vehicle_shared_vehicle_pcd_base, "object/intangible/vehicle/shared_vehicle_pcd_base.iff")
+
+object_intangible_vehicle_shared_swoopracer_black_pcd = SharedIntangibleObjectTemplate:new {
+	clientTemplateFileName = "object/intangible/vehicle/shared_swoopracer_black_pcd.iff"
+	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
+--[[
+	appearanceFilename = "appearance/jetpack_mandalorian_s01.apt",
+	arrangementDescriptorFilename = "",
+
+	clearFloraRadius = 0,
+	clientDataFile = "",
+	clientGameObjectType = 2056,
+	collisionActionBlockFlags = 0,
+	collisionActionFlags = 0,
+	collisionActionPassFlags = 0,
+	collisionMaterialBlockFlags = 0,
+	collisionMaterialFlags = 0,
+	collisionMaterialPassFlags = 0,
+	containerType = 0,
+	containerVolumeLimit = 0,
+
+	detailedDescription = "@monster_detail:jetpack",
+
+	gameObjectType = 2056,
+
+	locationReservationRadius = 0,
+	lookAtText = "string_id_table",
+
+	noBuildRadius = 0,
+
+	objectName = "@monster_name:jetpack",
+	onlyVisibleInTools = 0,
+
+	portalLayoutFilename = "",
+
+	scale = 0,
+	scaleThresholdBeforeExtentTest = 0.5,
+	sendToClient = 1,
+	slotDescriptorFilename = "abstract/slot/descriptor/mount_pcd.iff",
+	snapToTerrain = 0,
+	surfaceType = 0,
+
+	totalCellNumber = 0,
+
+	clientObjectCRC = 2096609656,
+	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/intangible/base/shared_base_intangible.iff", "object/intangible/vehicle/shared_vehicle_pcd_base.iff"}
+]]
+}
+
+ObjectTemplates:addClientTemplate(object_intangible_vehicle_shared_swoopracer_black_pcd, "object/intangible/vehicle/shared_swoopracer_black_pcd.iff")
+
+object_intangible_vehicle_shared_swoopracer_red_pcd = SharedIntangibleObjectTemplate:new {
+	clientTemplateFileName = "object/intangible/vehicle/shared_swoopracer_red_pcd.iff"
+	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
+--[[
+	appearanceFilename = "appearance/jetpack_mandalorian_s01.apt",
+	arrangementDescriptorFilename = "",
+
+	clearFloraRadius = 0,
+	clientDataFile = "",
+	clientGameObjectType = 2056,
+	collisionActionBlockFlags = 0,
+	collisionActionFlags = 0,
+	collisionActionPassFlags = 0,
+	collisionMaterialBlockFlags = 0,
+	collisionMaterialFlags = 0,
+	collisionMaterialPassFlags = 0,
+	containerType = 0,
+	containerVolumeLimit = 0,
+
+	detailedDescription = "@monster_detail:jetpack",
+
+	gameObjectType = 2056,
+
+	locationReservationRadius = 0,
+	lookAtText = "string_id_table",
+
+	noBuildRadius = 0,
+
+	objectName = "@monster_name:jetpack",
+	onlyVisibleInTools = 0,
+
+	portalLayoutFilename = "",
+
+	scale = 0,
+	scaleThresholdBeforeExtentTest = 0.5,
+	sendToClient = 1,
+	slotDescriptorFilename = "abstract/slot/descriptor/mount_pcd.iff",
+	snapToTerrain = 0,
+	surfaceType = 0,
+
+	totalCellNumber = 0,
+
+	clientObjectCRC = 2096609656,
+	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/intangible/base/shared_base_intangible.iff", "object/intangible/vehicle/shared_vehicle_pcd_base.iff"}
+]]
+}
+
+ObjectTemplates:addClientTemplate(object_intangible_vehicle_shared_swoopracer_red_pcd, "object/intangible/vehicle/shared_swoopracer_red_pcd.iff")
+
+object_intangible_vehicle_shared_swoopracer_green_pcd = SharedIntangibleObjectTemplate:new {
+	clientTemplateFileName = "object/intangible/vehicle/shared_swoopracer_green_pcd.iff"
+	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
+--[[
+	appearanceFilename = "appearance/jetpack_mandalorian_s01.apt",
+	arrangementDescriptorFilename = "",
+
+	clearFloraRadius = 0,
+	clientDataFile = "",
+	clientGameObjectType = 2056,
+	collisionActionBlockFlags = 0,
+	collisionActionFlags = 0,
+	collisionActionPassFlags = 0,
+	collisionMaterialBlockFlags = 0,
+	collisionMaterialFlags = 0,
+	collisionMaterialPassFlags = 0,
+	containerType = 0,
+	containerVolumeLimit = 0,
+
+	detailedDescription = "@monster_detail:jetpack",
+
+	gameObjectType = 2056,
+
+	locationReservationRadius = 0,
+	lookAtText = "string_id_table",
+
+	noBuildRadius = 0,
+
+	objectName = "@monster_name:jetpack",
+	onlyVisibleInTools = 0,
+
+	portalLayoutFilename = "",
+
+	scale = 0,
+	scaleThresholdBeforeExtentTest = 0.5,
+	sendToClient = 1,
+	slotDescriptorFilename = "abstract/slot/descriptor/mount_pcd.iff",
+	snapToTerrain = 0,
+	surfaceType = 0,
+
+	totalCellNumber = 0,
+
+	clientObjectCRC = 2096609656,
+	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/intangible/base/shared_base_intangible.iff", "object/intangible/vehicle/shared_vehicle_pcd_base.iff"}
+]]
+}
+
+ObjectTemplates:addClientTemplate(object_intangible_vehicle_shared_swoopracer_green_pcd, "object/intangible/vehicle/shared_swoopracer_green_pcd.iff")
+
+object_intangible_vehicle_shared_swoopracer_blue_pcd = SharedIntangibleObjectTemplate:new {
+	clientTemplateFileName = "object/intangible/vehicle/shared_swoopracer_blue_pcd.iff"
+	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
+--[[
+	appearanceFilename = "appearance/jetpack_mandalorian_s01.apt",
+	arrangementDescriptorFilename = "",
+
+	clearFloraRadius = 0,
+	clientDataFile = "",
+	clientGameObjectType = 2056,
+	collisionActionBlockFlags = 0,
+	collisionActionFlags = 0,
+	collisionActionPassFlags = 0,
+	collisionMaterialBlockFlags = 0,
+	collisionMaterialFlags = 0,
+	collisionMaterialPassFlags = 0,
+	containerType = 0,
+	containerVolumeLimit = 0,
+
+	detailedDescription = "@monster_detail:jetpack",
+
+	gameObjectType = 2056,
+
+	locationReservationRadius = 0,
+	lookAtText = "string_id_table",
+
+	noBuildRadius = 0,
+
+	objectName = "@monster_name:jetpack",
+	onlyVisibleInTools = 0,
+
+	portalLayoutFilename = "",
+
+	scale = 0,
+	scaleThresholdBeforeExtentTest = 0.5,
+	sendToClient = 1,
+	slotDescriptorFilename = "abstract/slot/descriptor/mount_pcd.iff",
+	snapToTerrain = 0,
+	surfaceType = 0,
+
+	totalCellNumber = 0,
+
+	clientObjectCRC = 2096609656,
+	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/intangible/base/shared_base_intangible.iff", "object/intangible/vehicle/shared_vehicle_pcd_base.iff"}
+]]
+}
+
+ObjectTemplates:addClientTemplate(object_intangible_vehicle_shared_swoopracer_blue_pcd, "object/intangible/vehicle/shared_swoopracer_blue_pcd.iff")
+
+object_intangible_vehicle_shared_swoopracer_purple_pcd = SharedIntangibleObjectTemplate:new {
+	clientTemplateFileName = "object/intangible/vehicle/shared_swoopracer_purple_pcd.iff"
+	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
+--[[
+	appearanceFilename = "appearance/jetpack_mandalorian_s01.apt",
+	arrangementDescriptorFilename = "",
+
+	clearFloraRadius = 0,
+	clientDataFile = "",
+	clientGameObjectType = 2056,
+	collisionActionBlockFlags = 0,
+	collisionActionFlags = 0,
+	collisionActionPassFlags = 0,
+	collisionMaterialBlockFlags = 0,
+	collisionMaterialFlags = 0,
+	collisionMaterialPassFlags = 0,
+	containerType = 0,
+	containerVolumeLimit = 0,
+
+	detailedDescription = "@monster_detail:jetpack",
+
+	gameObjectType = 2056,
+
+	locationReservationRadius = 0,
+	lookAtText = "string_id_table",
+
+	noBuildRadius = 0,
+
+	objectName = "@monster_name:jetpack",
+	onlyVisibleInTools = 0,
+
+	portalLayoutFilename = "",
+
+	scale = 0,
+	scaleThresholdBeforeExtentTest = 0.5,
+	sendToClient = 1,
+	slotDescriptorFilename = "abstract/slot/descriptor/mount_pcd.iff",
+	snapToTerrain = 0,
+	surfaceType = 0,
+
+	totalCellNumber = 0,
+
+	clientObjectCRC = 2096609656,
+	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/intangible/base/shared_base_intangible.iff", "object/intangible/vehicle/shared_vehicle_pcd_base.iff"}
+]]
+}
+
+ObjectTemplates:addClientTemplate(object_intangible_vehicle_shared_swoopracer_purple_pcd, "object/intangible/vehicle/shared_swoopracer_purple_pcd.iff")
+
+object_intangible_vehicle_shared_swoopracer_silver_pcd = SharedIntangibleObjectTemplate:new {
+	clientTemplateFileName = "object/intangible/vehicle/shared_swoopracer_silver_pcd.iff"
+	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
+--[[
+	appearanceFilename = "appearance/jetpack_mandalorian_s01.apt",
+	arrangementDescriptorFilename = "",
+
+	clearFloraRadius = 0,
+	clientDataFile = "",
+	clientGameObjectType = 2056,
+	collisionActionBlockFlags = 0,
+	collisionActionFlags = 0,
+	collisionActionPassFlags = 0,
+	collisionMaterialBlockFlags = 0,
+	collisionMaterialFlags = 0,
+	collisionMaterialPassFlags = 0,
+	containerType = 0,
+	containerVolumeLimit = 0,
+
+	detailedDescription = "@monster_detail:jetpack",
+
+	gameObjectType = 2056,
+
+	locationReservationRadius = 0,
+	lookAtText = "string_id_table",
+
+	noBuildRadius = 0,
+
+	objectName = "@monster_name:jetpack",
+	onlyVisibleInTools = 0,
+
+	portalLayoutFilename = "",
+
+	scale = 0,
+	scaleThresholdBeforeExtentTest = 0.5,
+	sendToClient = 1,
+	slotDescriptorFilename = "abstract/slot/descriptor/mount_pcd.iff",
+	snapToTerrain = 0,
+	surfaceType = 0,
+
+	totalCellNumber = 0,
+
+	clientObjectCRC = 2096609656,
+	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/intangible/base/shared_base_intangible.iff", "object/intangible/vehicle/shared_vehicle_pcd_base.iff"}
+]]
+}
+
+ObjectTemplates:addClientTemplate(object_intangible_vehicle_shared_swoopracer_silver_pcd, "object/intangible/vehicle/shared_swoopracer_silver_pcd.iff")
+
+object_intangible_vehicle_shared_swoopracer_gold_pcd = SharedIntangibleObjectTemplate:new {
+	clientTemplateFileName = "object/intangible/vehicle/shared_swoopracer_gold_pcd.iff"
+	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
+--[[
+	appearanceFilename = "appearance/jetpack_mandalorian_s01.apt",
+	arrangementDescriptorFilename = "",
+
+	clearFloraRadius = 0,
+	clientDataFile = "",
+	clientGameObjectType = 2056,
+	collisionActionBlockFlags = 0,
+	collisionActionFlags = 0,
+	collisionActionPassFlags = 0,
+	collisionMaterialBlockFlags = 0,
+	collisionMaterialFlags = 0,
+	collisionMaterialPassFlags = 0,
+	containerType = 0,
+	containerVolumeLimit = 0,
+
+	detailedDescription = "@monster_detail:jetpack",
+
+	gameObjectType = 2056,
+
+	locationReservationRadius = 0,
+	lookAtText = "string_id_table",
+
+	noBuildRadius = 0,
+
+	objectName = "@monster_name:jetpack",
+	onlyVisibleInTools = 0,
+
+	portalLayoutFilename = "",
+
+	scale = 0,
+	scaleThresholdBeforeExtentTest = 0.5,
+	sendToClient = 1,
+	slotDescriptorFilename = "abstract/slot/descriptor/mount_pcd.iff",
+	snapToTerrain = 0,
+	surfaceType = 0,
+
+	totalCellNumber = 0,
+
+	clientObjectCRC = 2096609656,
+	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/intangible/base/shared_base_intangible.iff", "object/intangible/vehicle/shared_vehicle_pcd_base.iff"}
+]]
+}
+
+ObjectTemplates:addClientTemplate(object_intangible_vehicle_shared_swoopracer_gold_pcd, "object/intangible/vehicle/shared_swoopracer_gold_pcd.iff")
+
+object_intangible_vehicle_shared_pod_racer_balta_podracer_pcd = SharedIntangibleObjectTemplate:new {
+	clientTemplateFileName = "object/intangible/vehicle/shared_pod_racer_balta_podracer_pcd.iff"
+	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
+--[[
+	appearanceFilename = "appearance/jetpack_mandalorian_s01.apt",
+	arrangementDescriptorFilename = "",
+
+	clearFloraRadius = 0,
+	clientDataFile = "",
+	clientGameObjectType = 2056,
+	collisionActionBlockFlags = 0,
+	collisionActionFlags = 0,
+	collisionActionPassFlags = 0,
+	collisionMaterialBlockFlags = 0,
+	collisionMaterialFlags = 0,
+	collisionMaterialPassFlags = 0,
+	containerType = 0,
+	containerVolumeLimit = 0,
+
+	detailedDescription = "@monster_detail:jetpack",
+
+	gameObjectType = 2056,
+
+	locationReservationRadius = 0,
+	lookAtText = "string_id_table",
+
+	noBuildRadius = 0,
+
+	objectName = "@monster_name:jetpack",
+	onlyVisibleInTools = 0,
+
+	portalLayoutFilename = "",
+
+	scale = 0,
+	scaleThresholdBeforeExtentTest = 0.5,
+	sendToClient = 1,
+	slotDescriptorFilename = "abstract/slot/descriptor/mount_pcd.iff",
+	snapToTerrain = 0,
+	surfaceType = 0,
+
+	totalCellNumber = 0,
+
+	clientObjectCRC = 2096609656,
+	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/intangible/base/shared_base_intangible.iff", "object/intangible/vehicle/shared_vehicle_pcd_base.iff"}
+]]
+}
+
+ObjectTemplates:addClientTemplate(object_intangible_vehicle_shared_pod_racer_balta_podracer_pcd, "object/intangible/vehicle/shared_pod_racer_balta_podracer_pcd.iff")

@@ -91,7 +91,6 @@
 #include "packets/trade/VerifyTradeMessageCallback.h"
 #include "packets/trade/AddItemMessageCallback.h"
 #include "packets/trade/GiveMoneyMessageCallback.h"
-#include "packets/trade/DenyTradeMessage.h"
 
 #include "packets/ship/ShipUpdateTransformCallback.h"
 
@@ -148,7 +147,6 @@ void ZonePacketHandler::registerMessages() {
 	messageCallbackFactory.registerObject<BidAuctionMessageCallback>(0x91125453);
 	messageCallbackFactory.registerObject<PlanetTravelPointListRequestCallback>(0x96405d4d);
 	messageCallbackFactory.registerObject<AbortTradeMessageCallback>(0x9CA80F98);
-	messageCallbackFactory.registerObject<DenyTradeMessageCallback>(0x6EC28670);
 	messageCallbackFactory.registerObject<AcceptTransactionMessageCallback>(0xB131CA17);
 	messageCallbackFactory.registerObject<UnAcceptTransactionMessageCallback>(0xE81E4382);
 	messageCallbackFactory.registerObject<VerifyTradeMessageCallback>(0x9AE247EE);

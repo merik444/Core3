@@ -4,13 +4,13 @@ singing_mountain_clan_dragoon = Creature:new {
 	randomNameTag = true,
 	socialGroup = "mtn_clan",
 	faction = "mtn_clan",
-	level = 94,
+	level = 134,
 	chanceHit = 0.95,
 	damageMin = 620,
 	damageMax = 950,
 	baseXp = 8964,
-	baseHAM = 20000,
-	baseHAMmax = 25000,
+	baseHAM = 40000,
+	baseHAMmax = 49000,
 	armor = 2,
 	resists = {45,45,75,35,75,35,35,35,-1},
 	meatType = "",
@@ -31,17 +31,17 @@ singing_mountain_clan_dragoon = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "junk", chance = 1500000},
+				--{group = "junk", chance = 1500000},
 				{group = "power_crystals", chance = 500000},
 				{group = "color_crystals", chance = 500000},
-				{group = "armor_attachments", chance = 400000},
-				{group = "clothing_attachments", chance = 400000},
-				{group = "melee_weapons", chance = 2700000},
-				{group = "rifles", chance = 1000000},
-				{group = "pistols", chance = 1000000},
-				{group = "carbines", chance = 1000000},
-				{group = "wearables_uncommon", chance = 500000},
-				{group = "tailor_components", chance = 500000}
+				{group = "armor_attachments", chance = 500000},
+				{group = "clothing_attachments", chance = 500000},
+				{group = "melee_weapons", chance = 3000000},
+				{group = "rifles", chance = 2000000},
+				{group = "pistols", chance = 1500000},
+				{group = "carbines", chance = 1500000},
+				--{group = "wearables_uncommon", chance = 500000},
+				--{group = "tailor_components", chance = 500000}
 			}
 		}
 	},

@@ -84,10 +84,10 @@ void VehicleControlDeviceImplementation::generateObject(CreatureObject* player) 
 		Reference<CallMountTask*> callMount = new CallMountTask(_this.getReferenceUnsafeStaticCast(), player, "call_mount");
 
 		StringIdChatParameter message("pet/pet_menu", "call_vehicle_delay");
-		message.setDI(15);
+		message.setDI(3);
 		player->sendSystemMessage(message);
 
-		player->addPendingTask("call_mount", callMount, 15 * 1000);
+		player->addPendingTask("call_mount", callMount, 3 * 1000);
 
 		if (vehicleControlObserver == NULL) {
 			vehicleControlObserver = new VehicleControlObserver(_this.getReferenceUnsafeStaticCast());
@@ -178,7 +178,11 @@ void VehicleControlDeviceImplementation::storeObject(CreatureObject* player, boo
 	/*if (!controlledObject->isInQuadTree())
 		return;*/
 
-	if (!force && (player->isInCombat() || player->isDead()))
+	
+	/*Stops a player storing vehicle if dead/incomband*/
+	/*if (!force && (player->isInCombat() || player->isDead()))
+		return;*/
+	if (!force && (player->isDead())) /*if player is dead it cannot despawn vehicle until its cloned*/
 		return;
 
 	if (player->isRidingMount() && player->getParent() == controlledObject) {

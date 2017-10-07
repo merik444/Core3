@@ -45,6 +45,7 @@
 --Children folder includes
 
 -- Server Objects
+includeFile("mobile/vehicle/pod_racer_balta_podracer.lua")
 includeFile("mobile/vehicle/jetpack.lua")
 includeFile("mobile/vehicle/landspeeder_av21.lua")
 includeFile("mobile/vehicle/landspeeder_base.lua")
@@ -55,4 +56,11 @@ includeFile("mobile/vehicle/speederbike.lua")
 includeFile("mobile/vehicle/speederbike_base.lua")
 includeFile("mobile/vehicle/speederbike_flash.lua")
 includeFile("mobile/vehicle/speederbike_swoop.lua")
+includeFile("mobile/vehicle/swoopracer_black.lua")
+includeFile("mobile/vehicle/swoopracer_blue.lua")
+includeFile("mobile/vehicle/swoopracer_green.lua")
+includeFile("mobile/vehicle/swoopracer_red.lua")
+includeFile("mobile/vehicle/swoopracer_purple.lua")
+includeFile("mobile/vehicle/swoopracer_gold.lua")
+includeFile("mobile/vehicle/swoopracer_silver.lua")
 includeFile("mobile/vehicle/vehicle_base.lua")

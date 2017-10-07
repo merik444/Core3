@@ -40,8 +40,7 @@
 --gives permission to release a modified version without this exception; 
 --this exception also makes it possible to release a modified version 
 
--- Custom content
-includeFile("../custom_scripts/object/serverobjects.lua")
+
 
 --Children folder includes
 includeFile("battlefield_marker/serverobjects.lua")
@@ -50,6 +49,7 @@ includeFile("cell/serverobjects.lua")
 includeFile("construction_contract/serverobjects.lua")
 includeFile("counting/serverobjects.lua")
 includeFile("creature/serverobjects.lua")
+includeFile("custom_content/serverobjects.lua")
 includeFile("draft_schematic/serverobjects.lua")
 includeFile("factory/serverobjects.lua")
 includeFile("group/serverobjects.lua")

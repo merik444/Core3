@@ -43,7 +43,6 @@
 #include "server/zone/objects/building/components/GCWBaseContainerComponent.h"
 #include "server/zone/objects/building/components/EnclaveContainerComponent.h"
 #include "templates/appearance/AppearanceTemplate.h"
-#include "templates/appearance/MeshData.h"
 
 void BuildingObjectImplementation::initializeTransientMembers() {
 	StructureObjectImplementation::initializeTransientMembers();
@@ -228,50 +227,20 @@ Vector3 BuildingObjectImplementation::getEjectionPoint() {
 				const Vector<Reference<CellProperty*> >& cells = portalLayout->getCellProperties();
 				if(cells.size() > 0) {
 					const CellProperty* cell = cells.get(0);
-					for (int i=0; i<cell->getNumberOfPortals(); i++) {
+					if (cell->getNumberOfPortals() > 0) {
 						const CellPortal* portal = cell->getPortal(0);
 						const AABB& box = portalLayout->getPortalBounds(portal->getGeometryIndex());
-						const MeshData *geom = portalLayout->getPortalGeometry(portal->getGeometryIndex());
 
-						if (geom == NULL)
-							continue;
-
-						const Vector<MeshTriangle>& tris = *geom->getTriangles();
-						const Vector<Vector3>& verts = *geom->getVerts();
-						if (tris.size() == 0)
-							continue;
-
-						const MeshTriangle& tri = tris.get(0);
-						const int* ind = tri.getVerts();
-						Vector3 normal;
-						Vector3 v[3] = { verts.get(ind[0]), verts.get(ind[1]), verts.get(ind[2]) };
-						if (!portal->isWindingCCW()) {
-							normal = (v[0] - v[1]).crossProduct(v[0]-v[2]);
-						} else {
-							normal = (v[0] - v[2]).crossProduct(v[0]-v[1]);
-						}
-						normal.normalize();
-
-						Vector3 floor = box.center() - Vector3(0, box.extents().getY(), 0);
-						floor += normal * 2.5f;
-
+						Vector3 center = box.center();
 						Matrix4 transform;
 
-						transform.setRotationMatrix(direction.toMatrix3());
-						transform.setTranslation(getPositionX(), getPositionZ(), getPositionY());
+						Quaternion directionRecast(direction.getW(), direction.getX(), direction.getY(), -direction.getZ());
 
-						// this works, i have no idea why we need it. I give up.
-						// Matrix4 transpose
-						Matrix4 orig = transform;
-						transform[0][1] = orig[1][0];
-						transform[0][2] = orig[2][0];
-						transform[1][0] = orig[0][1];
-						transform[1][2] = orig[2][1];
-						transform[2][0] = orig[0][2];
-						transform[2][1] = orig[1][2];
+						transform.setRotationMatrix(directionRecast.toMatrix3());
+						transform.setTranslation(getPositionX(), getPositionZ(), -getPositionY());
 
-						Vector3 flipped = transform * floor;
-						return Vector3(flipped[0], flipped[2], CollisionManager::getWorldFloorCollision(flipped[0], flipped[2], flipped[1], getZone(), false));
+						Vector3 dPos = (Vector3(center.getX(), center.getY(), -center.getZ()) * transform);
+						return Vector3(dPos.getX(), -dPos.getZ(), dPos.getY());
 					}
 				}
 			}
@@ -623,12 +592,12 @@ void BuildingObjectImplementation::destroyObjectFromDatabase(
 
 		if (child == NULL)
 			continue;
-          
+
           	Locker locker(child);
 
 		if (child->isAiAgent()) {
 			AiAgent* ai = child->asAiAgent();
-                  
+
 			ai->setRespawnTimer(0);
 		}
 
@@ -813,7 +782,7 @@ void BuildingObjectImplementation::onExit(CreatureObject* player, uint64 parenti
 uint32 BuildingObjectImplementation::getMaximumNumberOfPlayerItems() {
 	SharedStructureObjectTemplate* ssot = dynamic_cast<SharedStructureObjectTemplate*> (templateObject.get());
 	if (isCivicStructure() )
-		return 250;
+		return 1000;
 
 	if (ssot == NULL)
 		return 0;
@@ -827,7 +796,7 @@ uint32 BuildingObjectImplementation::getMaximumNumberOfPlayerItems() {
 
 	auto maxItems = MAXPLAYERITEMS;
 
-	return Math::min(maxItems, lots * 100);
+	return Math::min(maxItems, lots * 300);
 }
 
 int BuildingObjectImplementation::notifyObjectInsertedToChild(SceneObject* object, SceneObject* child, SceneObject* oldParent) {
@@ -1716,4 +1685,3 @@ bool BuildingObject::isBuildingObject() {
 bool BuildingObjectImplementation::isBuildingObject() {
 	return true;
 }
-

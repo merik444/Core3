@@ -4,7 +4,7 @@ nightsister_protector = Creature:new {
 	randomNameTag = true,
 	socialGroup = "nightsister",
 	faction = "nightsister",
-	level = 131,
+	level = 156,
 	chanceHit = 4.75,
 	damageMin = 770,
 	damageMax = 1250,
@@ -33,15 +33,15 @@ nightsister_protector = Creature:new {
 			groups = {
 				{group = "power_crystals", chance = 500000},
 				{group = "color_crystals", chance = 500000},
-				{group = "nightsister_common", chance = 2300000},
-				{group = "armor_attachments", chance = 350000},
-				{group = "clothing_attachments", chance = 350000},
-				{group = "melee_weapons", chance = 2000000},
-				{group = "rifles", chance = 1000000},
-				{group = "pistols", chance = 1000000},
-				{group = "carbines", chance = 1000000},
-				{group = "wearables_common", chance = 500000},
-				{group = "tailor_components", chance = 500000}
+				{group = "nightsister_common", chance = 2500000},
+				{group = "armor_attachments", chance = 500000},
+				{group = "clothing_attachments", chance = 500000},
+				{group = "melee_weapons", chance = 500000},
+				{group = "rifles", chance = 1500000},
+				{group = "pistols", chance = 2000000},
+				{group = "carbines", chance = 1500000},
+				--{group = "wearables_common", chance = 500000},
+				--{group = "tailor_components", chance = 500000}
 			}
 		}
 	},

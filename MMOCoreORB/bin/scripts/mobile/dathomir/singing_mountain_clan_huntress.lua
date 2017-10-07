@@ -4,7 +4,7 @@ singing_mountain_clan_huntress = Creature:new {
 	randomNameTag = true,
 	socialGroup = "mtn_clan",
 	faction = "mtn_clan",
-	level = 75,
+	level = 135,
 	chanceHit = 0.75,
 	damageMin = 520,
 	damageMax = 750,
@@ -31,17 +31,17 @@ singing_mountain_clan_huntress = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "junk", chance = 1500000},
+				--{group = "junk", chance = 1500000},
 				{group = "power_crystals", chance = 500000},
 				{group = "color_crystals", chance = 500000},
-				{group = "armor_attachments", chance = 350000},
-				{group = "clothing_attachments", chance = 350000},
-				{group = "melee_weapons", chance = 2800000},
-				{group = "rifles", chance = 1000000},
-				{group = "pistols", chance = 1000000},
-				{group = "carbines", chance = 1000000},
-				{group = "wearables_uncommon", chance = 500000},
-				{group = "tailor_components", chance = 500000}
+				{group = "armor_attachments", chance = 500000},
+				{group = "clothing_attachments", chance = 500000},
+				{group = "melee_weapons", chance = 3000000},
+				{group = "rifles", chance = 1500000},
+				{group = "pistols", chance = 1500000},
+				{group = "carbines", chance = 2000000},
+				--{group = "wearables_uncommon", chance = 500000},
+				--{group = "tailor_components", chance = 500000}
 			}
 		}
 	},

@@ -12,7 +12,7 @@ cavern_spider = Creature:new {
 	armor = 0,
 	resists = {130,130,15,-1,15,15,-1,-1,-1},
 	meatType = "meat_insect",
-	meatAmount = 35,
+	meatAmount = 123,
 	hideType = "",
 	hideAmount = 0,
 	boneType = "",
@@ -27,7 +27,16 @@ cavern_spider = Creature:new {
 
 	templates = {"object/mobile/gaping_spider.iff"},
 	scale = 1.1,
-	lootGroups = {},
+	lootGroups = {
+	 {
+	        groups = {
+				{group = "geonosian_common", chance = 5000000},
+				{group = "geonosian_cubes", chance = 2500000},
+				{group = "weapons_all", chance = 2500000}
+			},
+			lootChance = 10000000
+		}
+	},
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {

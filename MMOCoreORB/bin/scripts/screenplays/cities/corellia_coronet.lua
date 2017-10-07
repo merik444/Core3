@@ -7,91 +7,6 @@ CorelliaCoronetScreenPlay = CityScreenPlay:new {
 
 	gcwMobs = {
 		{"stormtrooper_sniper", "rebel_master_sergeant", -501.3, 28, -4644.5, -2, 0, "", ""},
-		{"stormtrooper_squad_leader", "rebel_surface_marshall", -502.1, 28, -4701.1, 185.005, 0, "", ""},
-		{"command_security_guard", "rebel_specforce_pathfinder", -175.887, 28, -4765.95, 86.2823, 0, "npc_imperial", "conversation"},
-		{"dark_trooper", "specforce_heavy_weapons_specialist", -574.2, 28, -4247, 333.01, 0, "", ""},
-		{"dark_trooper", "specforce_heavy_weapons_specialist", -303.8, 28, -4144.4, 304.009, 0, "", ""},
-		{"dark_trooper", "specforce_heavy_weapons_specialist", 111.5, 28, -4464.9, 26.0008, 0, "", ""},
-		{"dark_trooper", "specforce_heavy_weapons_specialist", 141.3, 28, -4540.1, 138, 0, "npc_imperial", "neutral"},
-		{"dark_trooper", "specforce_heavy_weapons_specialist", -76.6, 28.5179, -4625.3, 215.006, 0, "", ""},
-		{"dark_trooper", "specforce_heavy_weapons_specialist", -124.2, 28, -4798.7, 116, 0, "", ""},
-		{"elite_sand_trooper", "specforce_infiltrator", -2.3, 28, -4512.6, 91, 0, "npc_imperial", "neutral"},
-		{"dark_trooper", "specforce_heavy_weapons_specialist", -458, 28, -4590.8, 262.008, 0, "", ""},
-		{"dark_trooper", "specforce_heavy_weapons_specialist", -175.3, 28, -4837.9, -179, 0, "npc_imperial", "neutral"},
-		{"imperial_army_captain", "specforce_major", -157.7, 28, -4832.6, -130, 0, "npc_imperial", "neutral"},
-		{"imperial_army_captain", "specforce_major", -177.7, 28, -4766.5, 86, 0, "npc_imperial", "neutral"},
-		{"imperial_colonel", "rebel_general", 158.9, 28, -4707.2, 137.004, 0, "", ""},
-		{"imperial_corporal", "specforce_marine", -289.2, 28, -4416.3, -94, 0, "", ""},
-		{"imperial_first_lieutenant", "specforce_lieutenant", -336.602, 28, -4791.97, 283.938, 0, "npc_imperial", "neutral"},
-		{"imperial_first_lieutenant", "specforce_lieutenant", -206.6, 28, -4063.8, 0, 0, "npc_imperial", "neutral"},
-		{"imperial_medic", "rebel_medic", -439.1, 28, -4144.4, 335.01, 0, "npc_imperial", "neutral"},
-		{"imperial_medic", "rebel_medic", -561.9, 28, -4234.3, -54, 0, "npc_imperial", "neutral"},
-		{"imperial_warrant_officer_ii", "specforce_master_sergeant", -404.7, 28, -4430.7, -45, 0, "", ""},
-		{"imperial_warrant_officer_ii", "specforce_master_sergeant", -541.2, 28, -4628.5, 176, 0, "npc_imperial", "neutral"},
-		{"scout_trooper", "specforce_marine", -593.7, 28, -4322, -98, 0, "", ""},
-		{"scout_trooper", "specforce_marine", -547.3, 28, -4668.3, 151, 0, "", ""},
-		{"scout_trooper", "specforce_marine", 141, 28, -4692.8, 76, 0, "", ""},
-		{"scout_trooper", "specforce_marine", 100.5, 28, -4668.1, -127, 0, "", ""},
-		{"scout_trooper", "specforce_marine", -192.6, 28, -4833.5, 134, 0, "", ""},
-		{"scout_trooper", "specforce_marine", -201.2, 28.6, -4122, 20.0006, 0, "", ""},
-		{"specialist_noncom", "specforce_technician", -171.8, 28, -4418, -88, 0, "", ""},
-		{"storm_commando", "specforce_heavy_weapons_specialist", 48.8, 28, -4569.3, 34, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -557.5, 28, -4230.3, 266.008, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -517.9, 28, -4213.9, 303.009, 0, "", ""},
-		{"stormtrooper", "specforce_marine", 19.3, 28, -4366.5, -176, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -64, 28, -4255.2, 55, 0, "", ""},
-		{"stormtrooper", "specforce_marine", 96.6, 28, -4394.9, 91.0027, 0, "", ""},
-		{"stormtrooper", "specforce_marine", 168.1, 28, -4698.4, 145.004, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -306.7, 28, -4785.9, 187.006, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -446.5, 28, -4744, 226.007, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -526.1, 28, -4675.8, 252.007, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -593.7, 28, -4502.9, 272.008, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -462.4, 28, -4569.3, 178, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -42.2, 28, -4500.6, 44.0013, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -35.4, 28.5179, -4573.8, 49.0014, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -249.8, 28, -4412.7, 96, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -215.7, 29.185, -4509.8, 1.00017, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -204.7, 29.185, -4509.8, 1.00017, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -569.2, 28, -4242.5, -43, 0, "npc_imperial", "neutral"},
-		{"stormtrooper", "specforce_marine", -276.7, 28, -4535.2, 230.415, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -148.6, 28, -4660.7, 202.006, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -159.2, 28, -4660.7, 161.005, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -216.9, 28.6, -4121.1, 339.01, 0, "", ""},
-		{"stormtrooper", "specforce_marine", 110.8, 28, -4496.5, 99, 0, "npc_imperial", "neutral"},
-		{"stormtrooper", "specforce_marine", 25.8, 28, -4239.9, -6, 0, "npc_imperial", "neutral"},
-		{"stormtrooper", "specforce_marine", -221.1, 28, -4798.1, 237.007, 0, "", ""},
-		{"stormtrooper", "specforce_marine", -531.8, 28, -4628.7, -165, 0, "", ""},
-		{"stormtrooper_bombardier", "specforce_procurement_specialist", -547.026, 28, -4669.14, 331.925, 0, "npc_imperial", "neutral"},
-		{"stormtrooper_captain", "specforce_major", 19.7, 28, -4282.5, -4, 0, "", ""},
-		{"stormtrooper_captain", "specforce_major", -338.2, 28, -4791.5, 110, 0, "npc_imperial", "neutral"},
-		{"stormtrooper_rifleman", "rebel_specforce_urban_guerrilla", -118.7, 28, -4204.6, 16.0005, 0, "", ""},
-		{"stormtrooper_rifleman", "rebel_specforce_urban_guerrilla", -526.1, 28, -4670.1, 290.009, 0, "", ""},
-		{"stormtrooper_rifleman", "rebel_specforce_urban_guerrilla", -193.7, 28, -4401.6, -90, 0, "", ""},
-		{"stormtrooper_rifleman", "rebel_specforce_urban_guerrilla", -316.4, 28.6, -4635.8, 172, 0, "", ""},
-		{"stormtrooper_rifleman", "rebel_specforce_urban_guerrilla", -223.2, 28, -4078, 9.00022, 0, "", ""},
-		{"stormtrooper_rifleman", "rebel_specforce_urban_guerrilla", -188.9, 28, -4076.8, 336.01, 0, "", ""},
-		{"stormtrooper_sniper", "specforce_infiltrator", 96.6, 28, -4407.1, 91.0027, 0, "", ""},
-		{"stormtrooper_sniper", "specforce_infiltrator", -295.9, 28, -4786.4, 194.006, 0, "", ""},
-		{"stormtrooper_sniper", "specforce_infiltrator", -593.7, 28, -4483.1, 270.008, 0, "", ""},
-		{"stormtrooper_sniper", "specforce_infiltrator", -59.1, 28, -4260.1, 47.0014, 0, "", ""},
-		{"stormtrooper_sniper", "specforce_infiltrator", -275.4, 28, -4614.6, 256.27, 0, "", ""},
-		{"stormtrooper_sniper", "specforce_infiltrator", -533.523, 28, -4632.07, 270.284, 0, "npc_imperial", "neutral"},
-		{"stormtrooper_squad_leader", "specforce_wilderness_operative", -226.3, 28, -4378.4, 90, 0, "", ""},
-		{"stormtrooper_squad_leader", "specforce_wilderness_operative", -12.4, 28.6, -4404.7, 181.005, 0, "", ""},
-		{"stormtrooper_squad_leader", "specforce_wilderness_operative", -175.938, 28, -4767.14, 86.307, 0, "npc_imperial", "conversation"},
-		{"corsec_agent", "corsec_agent", -671.712,6.15933,-4169.03,37.6923,0, "", ""},
-		{"corsec_detective", "corsec_detective", -526.1,28,-4702,-41,0, "", ""},
-		{"corsec_master_sergeant", "corsec_master_sergeant", -172.8,28,-4167.1,0,0, "", ""},
-		{"corsec_trooper", "corsec_trooper", -662.805,9.26289,-4182.05,196.426,0, "", ""},
-		{"corsec_detective", "corsec_detective", -672.123,5.60327,-4164.83,340.354,0, "", ""},
-		{"corsec_agent", "corsec_agent", -240.2,28,-4450.9,94,0, "", ""},
-		{"corsec_cadet", "corsec_cadet", -172.8,28.0929,-4165.5,179,0, "", ""},
-		{"corsec_captain", "corsec_captain", -528.144,28,-4699.89,132.784,0, "", ""},
-		{"corsec_chief", "corsec_chief", 0.3,28,-4464.5,-87,0, "", ""},
-		{"corsec_trooper", "corsec_trooper", -1.67932,28,-4464.42,93.3597,0, "", ""},
-		{"corsec_trooper", "corsec_trooper", -60,28.5,-4597.2,-96,0, "", ""},
-		{"corsec_trooper", "corsec_trooper", -344.9,28,-4444.3,-48,0, "", ""},
-		{"corsec_trooper", "corsec_trooper", -347.5,28,-4442.6,123,0, "", ""},
 	},
 }
 
@@ -298,7 +213,7 @@ function CorelliaCoronetScreenPlay:spawnMobiles()
 	spawnMobile(self.planet, "businessman",60,-306.34,28,-4620.82,67.4368,0)
 	spawnMobile(self.planet, "businessman",60,-312.404,28,-4646.51,242.881,0)
 	spawnMobile(self.planet, "businessman",60,-135.995,28,-4745.63,251.824,0)
-	spawnMobile(self.planet, "cll8_binary_load_lifter",60,-146.217,28,-4738.99,346.392,0)
+	--spawnMobile(self.planet, "cll8_binary_load_lifter",60,-146.217,28,-4738.99,346.392,0)
 	spawnMobile(self.planet, "commoner",60,-306.539,28,-4546.52,95.6639,0)
 	spawnMobile(self.planet, "commoner",60,-306.061,28,-4600.68,146.312,0)
 	spawnMobile(self.planet, "commoner",60,-258.479,28,-4620,198.098,0)
@@ -359,7 +274,7 @@ function CorelliaCoronetScreenPlay:spawnMobiles()
 	spawnMobile(self.planet, "informant_npc_lvl_1",0,-359,28,-4210,270,0)
 	spawnMobile(self.planet, "informant_npc_lvl_1",0,-293,28,-4251,315,0)
 	spawnMobile(self.planet, "informant_npc_lvl_1",0,-184,28,-4342,90,0)
-	spawnMobile(self.planet, "io_tsomcren",60,-140.701,28,-4719.16,44.0418,0)
+	--spawnMobile(self.planet, "io_tsomcren",60,-140.701,28,-4719.16,44.0418,0)
 	spawnMobile(self.planet, "junk_dealer", 0, -118.06, 28, -4791.91, -120, 0)
 	pNpc = spawnMobile(self.planet, "junk_dealer", 0, -189.62, 28, -4371.06, 0, 0)
 	if pNpc ~= nil then
@@ -370,6 +285,14 @@ function CorelliaCoronetScreenPlay:spawnMobiles()
 		AiAgent(pNpc):setConvoTemplate("junkDealerArmsConvoTemplate")
 	end
 
+	--Meatlump sparring area
+	--spawnMobile(self.planet, "meatlump_buffoon",1,-146.217,28,-4738.99,346.392,0)
+	--spawnMobile(self.planet, "meatlump_buffoon",1,-147,28,-4738.99,366.372,0)
+	--spawnMobile(self.planet, "meatlump_clod",1,-150,28,-4738,351.386,0)
+	--spawnMobile(self.planet, "meatlump_clod",1,-141,28,-4759,341.356,0)
+	--spawnMobile(self.planet, "meatlump_cretin",1,-144,28,-4761,341.356,0)
+	--spawnMobile(self.planet, "meatlump_clod",1,-144,28,-4766,344.366,0)
+	--spawnMobile(self.planet, "meatlump_fool",1,-147,28,-4763,343.376,0)
 	--Meatlump's outside
 	spawnMobile(self.planet, "meatlump_buffoon",300,-145,28.9,-4959.8,63,0)
 	spawnMobile(self.planet, "meatlump_buffoon",300,-54.3,28.2,-4963.4,-90,0)
@@ -437,9 +360,12 @@ function CorelliaCoronetScreenPlay:spawnMobiles()
 	spawnMobile(self.planet, "ragtag_loon",300,-525.124,5.82557,-4079.84,207.519,0)
 	spawnMobile(self.planet, "ragtag_loon",300,-534.124,6.67109,-4078.84,149.496,0)
 	spawnMobile(self.planet, "ragtag_maniac",300,-691.483,7.08209,-4227.75,29.5129,0)
-	spawnMobile(self.planet, "ral_mundi",60,-138.975,28,-4718.86,10.0036,0)
-	spawnMobile(self.planet, "tarth_jaxx",60,-137.464,28,-4718.83,342.825,0)
+	--spawnMobile(self.planet, "ral_mundi",60,-138.975,28,-4718.86,10.0036,0)
+	--spawnMobile(self.planet, "tarth_jaxx",60,-137.464,28,-4718.83,342.825,0)
 
+	--Trainer inside
+	spawnMobile(self.planet, "trainer_musician",1,-178.174,28,-4740.500,0,0)
+	spawnMobile(self.planet, "trainer_dancer",1,-174.926,28,-4739.17,0,0)
 	--Trainers Outside
 	spawnMobile(self.planet, "trainer_architect",0,-161,28,-4698,-95,0)
 	spawnMobile(self.planet, "trainer_artisan",0,-187,28,-4700,92,0)
@@ -460,4 +386,8 @@ function CorelliaCoronetScreenPlay:spawnMobiles()
 
 	-- Chassis dealer.
 	spawnMobile(self.planet, "chassis_dealer", 0, 0.1, 0.6, 72.9, -4, 1855672)
+	
+	
+	-- CUSTOM
+	spawnMobile(self.planet, "treasure_jawa", 10800, math.random(2000) + 1800, 28, math.random(2000) + -1800, math.random(360), 0)
 end

@@ -48,9 +48,9 @@ object_draft_schematic_structure_component_structural_module = object_draft_sche
 	customObjectName = "Structural Module",
 
 	craftingToolTab = 1024, -- (See DraftSchematicObjectTemplate.h)
-	complexity = 8,
+	complexity = 1,
 	size = 3,
-	factoryCrateSize = 100,
+	factoryCrateSize = 1000,
 
 	xpType = "crafting_structure_general",
 	xp = 500,

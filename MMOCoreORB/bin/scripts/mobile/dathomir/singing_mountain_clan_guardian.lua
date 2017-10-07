@@ -4,15 +4,15 @@ singing_mountain_clan_guardian = Creature:new {
 	randomNameTag = true,
 	socialGroup = "mtn_clan",
 	faction = "mtn_clan",
-	level = 156,
+	level = 186,
 	chanceHit = 8.5,
 	damageMin = 895,
 	damageMax = 1500,
 	baseXp = 14789,
 	baseHAM = 81000,
-	baseHAMmax = 99000,
+	baseHAMmax = 113000,
 	armor = 2,
-  resists = {200,30,30,200,200,200,200,200,-1},
+  	resists = {200,30,30,200,200,200,200,200,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -31,17 +31,17 @@ singing_mountain_clan_guardian = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "junk", chance = 1500000},
-				{group = "power_crystals", chance = 500000},
-				{group = "color_crystals", chance = 500000},
-				{group = "armor_attachments", chance = 450000},
-				{group = "clothing_attachments", chance = 450000},
-				{group = "melee_weapons", chance = 2600000},
-				{group = "rifles", chance = 1000000},
-				{group = "pistols", chance = 1000000},
-				{group = "carbines", chance = 1000000},
-				{group = "wearables_uncommon", chance = 500000},
-				{group = "tailor_components", chance = 500000}
+				--{group = "junk", chance = 1500000},
+				{group = "power_crystals", chance = 1500000},
+				{group = "color_crystals", chance = 1500000},
+				{group = "armor_attachments", chance = 500000},
+				{group = "clothing_attachments", chance = 500000},
+				{group = "melee_weapons", chance = 1000000},
+				{group = "rifles", chance = 2000000},
+				{group = "pistols", chance = 1500000},
+				{group = "carbines", chance = 1500000},
+				--{group = "wearables_uncommon", chance = 500000},
+				--{group = "tailor_components", chance = 500000}
 			}
 		}
 	},

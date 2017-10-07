@@ -1776,10 +1776,10 @@ void PlayerObjectImplementation::activateForcePowerRegen() {
 	}
 
 
-	float regen = (float)creature->getSkillMod("jedi_force_power_regen");
+	//float regen = (float)creature->getSkillMod("jedi_force_power_regen");
 
-	if(regen == 0.0f)
-		return;
+	// if(regen == 0.0f)
+	// 	return;
 
 	if (forceRegenerationEvent == NULL) {
 		forceRegenerationEvent = new ForceRegenerationEvent(_this.getReferenceUnsafeStaticCast());
@@ -1787,19 +1787,26 @@ void PlayerObjectImplementation::activateForcePowerRegen() {
 
 	if (!forceRegenerationEvent->isScheduled()) {
 
-		int regenMultiplier = creature->getSkillMod("private_force_regen_multiplier");
-		int regenDivisor = creature->getSkillMod("private_force_regen_divisor");
+		//-----------------------------------------------------------------------
+		//-----------------------------------------------------------------------
+		// Should not be modifying the tick-rate to achieve correct force regen!
+		//-----------------------------------------------------------------------
+		//-----------------------------------------------------------------------
+		// int regenMultiplier = creature->getSkillMod("private_force_regen_multiplier");
+		// int regenDivisor = creature->getSkillMod("private_force_regen_divisor");
 
-		if (regenMultiplier != 0)
-			regen *= regenMultiplier;
+		// if (regenMultiplier != 0)
+		// 	regen *= regenMultiplier;
 
-		if (regenDivisor != 0)
-			regen /= regenDivisor;
+		// if (regenDivisor != 0)
+		// 	regen /= regenDivisor;
 
-		float timer = regen / 5.f;
+		// float timer = regen / 5.f;
 
-		float scheduledTime = 10 / timer;
-		uint64 miliTime = static_cast<uint64>(scheduledTime * 1000.f);
+		// float scheduledTime = 10 / timer;
+
+		// Force should tick every 2 seconds.
+		uint64 miliTime = static_cast<uint64>(2 * 1000.f);
 		forceRegenerationEvent->schedule(miliTime);
 	}
 }
@@ -2025,7 +2032,12 @@ void PlayerObjectImplementation::doForceRegen() {
 	if (creature == NULL || creature->isIncapacitated() || creature->isDead())
 		return;
 
-	const static uint32 tick = 5;
+	//const static uint32 tick = 5;
+
+	// Get player ForceRegen skillMod, and then divide by 5 to get tickrate for every 2 seconds.
+	// Round this to nearest int.
+	uint32 tick = creature->getSkillMod("jedi_force_power_regen");
+	tick = round(tick / 5);
 
 	uint32 modifier = 1;
 

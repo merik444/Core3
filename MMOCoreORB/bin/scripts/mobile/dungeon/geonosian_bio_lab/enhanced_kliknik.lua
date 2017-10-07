@@ -1,20 +1,21 @@
 enhanced_kliknik = Creature:new {
 	objectName = "@mob/creature_names:geonosian_kliknik_force_strong",
 	socialGroup = "geonosian_creature",
+	pvpFaction = "",
 	faction = "",
-	level = 109,
-	chanceHit = 2.2,
-	damageMin = 675,
-	damageMax = 1060,
+	level = 350,
+	chanceHit = 29.0,
+	damageMin = 375,
+	damageMax = 660,
 	baseXp = 10360,
-	baseHAM = 34000,
-	baseHAMmax = 42000,
+	baseHAM = 32000,
+	baseHAMmax = 57000,
 	armor = 2,
-	resists = {40,40,10,195,-1,110,110,10,-1},
+	resists = {40,40,25,95,35,40,25,25,15},
 	meatType = "meat_carnivore",
-	meatAmount = 45,
+	meatAmount = 0,
 	hideType = "hide_scaley",
-	hideAmount = 40,
+	hideAmount = 0,
 	boneType = "",
 	boneAmount = 0,
 	milk = 0,
@@ -22,24 +23,42 @@ enhanced_kliknik = Creature:new {
 	ferocity = 15,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = CARNIVORE,
 
 	templates = {"object/mobile/kliknik.iff"},
 	scale = 1.4,
 	lootGroups = {
-	 {
-	        groups = {
-				{group = "geo_kliknik", chance = 10000000}
+		{
+	        groups = 
+			{
+				{group = "armor_attachments", chance = 10000000},
 			},
-			lootChance = 3180000
-		}
+			lootChance = 1500000,
+		},
+		{
+	        groups = 
+			{
+				{group = "clothing_attachments", chance = 10000000},
+			},
+			lootChance = 1000000,
+		},
+	 	{
+	        groups = 
+			{
+				
+				{group = "geonosian_relic", chance = 3500000},
+				{group = "geonosian_common", chance = 5000000},
+				{group = "mastery_geocave_jewelry", chance = 1500000},
+			},
+			lootChance = 1500000,
+		},
 	},
-	weapons = {"creature_spit_heavy_flame"},
+	weapons = {"creature_spit_small_yellow"},
 	conversationTemplate = "",
 	attacks = {
-		{"stunattack",""},
-		{"creatureareaattack",""}
+		{"creatureareattack",""},
+		{"stunattack","stunChance=50"}
 	}
 }
 

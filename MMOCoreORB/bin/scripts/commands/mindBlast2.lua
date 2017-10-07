@@ -44,9 +44,9 @@
 MindBlast2Command = {
 	name = "mindblast2",
 
-	minDamage = 1125,
-	maxDamage = 1500,
-	speed = 4.0,
+	minDamage = 325,
+	maxDamage = 525,
+	speed = 1.5,
 	forceCost = 160,
 	visMod = 25,
 	accuracySkillMod = "mindblast_accuracy";
@@ -90,7 +90,7 @@ MindBlast2Command = {
 
 	combatSpam = "mindblast2",
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = MIND_ATTRIBUTE,
 
 	forceAttack = true,
 	damageType = LIGHTSABER_DAMAGE,

@@ -184,7 +184,7 @@ function TreasureMapMenuComponent:openChestEvent(pChest, pCreature)
 	local hasOpenedChest = readData(playerID .. ":hasOpenedChest")
 
 	if (hasOpenedChest ~= 1) then
-		local credits = getRandomNumber(500, 5000)
+		local credits = getRandomNumber(55000, 175000)
 		CreatureObject(pCreature):addCashCredits(credits, true)
 		CreatureObject(pCreature):sendSystemMessage("You find " .. credits .. " credits in the chest.")
 		writeData(playerID .. ":hasOpenedChest", 1)
@@ -199,7 +199,7 @@ function TreasureMapMenuComponent:spawnTreasureLoot(pChest, pPlayer, mapType)
 	end
 
 	if (mapType == 1 or mapType == 2 or mapType == 3) then
-		local playerLevelRange = getRandomNumber(CreatureObject(pPlayer):getLevel() - 5, CreatureObject(pPlayer):getLevel() + 5)
+		local playerLevelRange = getRandomNumber(CreatureObject(pPlayer):getLevel() + 5, CreatureObject(pPlayer):getLevel() + 30)
 
 		for i = 1, 5 do
 			createLoot(pChest, "treasure_map_group", playerLevelRange, false)

@@ -87,21 +87,21 @@ object_tangible_wearables_armor_padded_armor_padded_s01_gloves = object_tangible
 	vulnerability = HEAT + ACID + STUN + LIGHTSABER,
 
 	-- These are default Blue Frog stats
-	healthEncumbrance = 1,
-	actionEncumbrance = 1,
+	healthEncumbrance = 2,
+	actionEncumbrance = 3,
 	mindEncumbrance = 1,
 
 	-- LIGHT, MEDIUM, HEAVY
 	rating = LIGHT,
 
-	kinetic = 15,
+	kinetic = 18,
 	energy = 15,
-	electricity = 15,
-	stun = 15,
-	blast = 15,
-	heat = 15,
-	cold = 15,
-	acid = 15,
+	electricity = 20,
+	blast = 5,
+	heat = 18,
+	cold = 20,
+	acid = 5,
+	stun = 0,
 	lightSaber = 0,
 
 	numberExperimentalProperties = {1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1},

@@ -2,6 +2,7 @@ biogenic_crazyguy = Creature:new {
 	objectName = "",
 	customName = "Ebotia Dived (a scientist)",
 	socialGroup = "self",
+	pvpFaction = "",
 	faction = "",
 	level = 25,
 	chanceHit = 0.35,
@@ -23,7 +24,7 @@ biogenic_crazyguy = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = NONE,
-	optionsBitmask = AIENABLED + INVULNERABLE + CONVERSABLE,
+	optionsBitmask = 392,
 	diet = HERBIVORE,
 
 	templates = {
@@ -31,7 +32,7 @@ biogenic_crazyguy = Creature:new {
 		"object/mobile/dressed_combatmedic_trainer_human_female_01.iff"},
 	lootGroups = {},
 	weapons = {},
-	conversationTemplate = "biogenicCrazyGuyConvoTemplate",
+	conversationTemplate = "",
 	attacks = {}
 }
 

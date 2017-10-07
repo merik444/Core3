@@ -4,7 +4,7 @@ meatlump_clod = Creature:new {
 	randomNameTag = true,
 	socialGroup = "meatlump",
 	faction = "meatlump",
-	level = 8,
+	level = 20,
 	chanceHit = 0.270000,
 	damageMin = 70,
 	damageMax = 75,
@@ -42,11 +42,15 @@ meatlump_clod = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "junk", chance = 2900000},
-				{group = "loot_kit_parts", chance = 1500000},
-				{group = "color_crystals", chance = 100000},
-				{group = "tailor_components", chance = 500000},
-				{group = "meatlump_common", chance = 5000000}
+				--{group = "junk", chance = 2900000},
+				{group = "loot_kit_parts", chance = 2500000},
+				--{group = "color_crystals", chance = 100000},
+				{group = "tailor_components", chance = 2500000},
+				{group = "meatlump_common", chance = 5000000},
+				--{group = "power_crystals", chance = 2500000},
+				--{group = "clothing_attachments", chance = 2500000},
+				--{group = "acklay", chance = 2500000},
+				--{group = "axkva_min", chance = 2500000},
 			}
 		}
 	},

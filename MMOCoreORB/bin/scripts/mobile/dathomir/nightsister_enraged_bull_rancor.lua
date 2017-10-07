@@ -2,13 +2,13 @@ nightsister_enraged_bull_rancor = Creature:new {
 	objectName = "@mob/creature_names:nightsister_enraged_bull_rancor",
 	socialGroup = "nightsister",
 	faction = "nightsister",
-	level = 89,
+	level = 139,
 	chanceHit = 0.85,
 	damageMin = 570,
 	damageMax = 850,
 	baseXp = 8500,
-	baseHAM = 13000,
-	baseHAMmax = 16000,
+	baseHAM = 33000,
+	baseHAMmax = 43000,
 	armor = 1,
 	resists = {40,170,40,200,200,200,40,40,-1},
 	meatType = "meat_carnivore",
@@ -35,7 +35,7 @@ nightsister_enraged_bull_rancor = Creature:new {
 				{group = "weapons_all", chance = 2500000},
 				{group = "wearables_all", chance = 1500000}
 			},
-			lootChance = 2780000
+			lootChance = 10000000
 		}
 	},
 	weapons = {},

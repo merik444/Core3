@@ -1,6 +1,7 @@
 geonosian_worker = Creature:new {
 	objectName = "@mob/creature_names:geonosian_worker",
 	socialGroup = "geonosian",
+	pvpFaction = "",
 	faction = "",
 	level = 44,
 	chanceHit = 0.46,
@@ -22,7 +23,7 @@ geonosian_worker = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = 128,
 	diet = HERBIVORE,
 
 	templates = {
@@ -33,7 +34,8 @@ geonosian_worker = Creature:new {
 			groups = {
 				{group = "geonosian_common", chance = 5000000},
 				{group = "geonosian_relic", chance = 5000000}
-			}
+			},
+			lootChance = 2900000
 		}
 	},
 	weapons = {"geonosian_weapons"},
